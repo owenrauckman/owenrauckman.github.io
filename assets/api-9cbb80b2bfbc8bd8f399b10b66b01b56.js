@@ -1,0 +1,1 @@
+$(document).ready(function(){var t=[];!function(){var e=function(e){$.each(e,function(e,n){t.push(n.text)})},n=function(t){var e;$.ajax({async:!0,type:"GET",url:"assets/twit/get_tweets.php",data:e,success:t})};n(e)}(),$(document).ajaxComplete(function(){$(".tweet1 .twitter-container p").html(t[0]),$(".tweet2 .twitter-container p").html(t[1]),$(".twitter-container").linkify()})});

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="multicolore/stylesheet.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.container').css('min-height', $(window).innerHeight());
+    });
+      
+  </script>
+  
+</head>
+<body onload="getIt()">
+        <section class="container" onchange='getIt()' >
+    
+    <section class="content">
+        <section class="data" id="first" style="background:white">
+            <section class="logo">
+                <div class="title">Evaporation Rate Calculator</div>
+                <img src="img/geiger.png" href="http://www.geigerreadymix.com"/>
+                
+            </section>
+        </section>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+    
+        document.write("<section class='data' id='red'>");
+            document.write("<section class='selectContainer'>");
+            document.write("<section class='styled'>");
+                document.write("<div id='arrow'><img src='img/arrow.png'/></div>");
+                      document.write("<select id='cities' >");
+                      document.write("<option value='kansas_city'>Kansas City</option>");
+                      document.write("<option value='liberty'>Liberty</option>");
+                      document.write("<option value='Leavenworth'>Leavenworth</option>");
+                      document.write("<option value='lee's_summit'>Lee's Summit</option>");
+                      document.write("<option value='olathe'>Olathe</option>");
+                      document.write("</select>");
+            document.write("</section>");
+                document.write("</section><!--selectContainer-->");
+        document.write("</section>");
+                    
+                    
+
+  
+  var city = "kansas_city";
+  var state = "KS";
+  $("#cities").change(function() {
+    var x = document.getElementById("cities").selectedIndex;
+    var y = document.getElementById("cities").options;
+    city = y[x].text;
+    if(city =="Lee's Summit" || city =="liberty"){
+      state = "MO";
+    }
+    else{
+      state = "KS"; 
+
+    }
+  });
+
+  
+  
+
+function getIt(){  
+
+  $.ajax({
+      
+  url : "http://api.wunderground.com/api/c421207a6a958121/geolookup/conditions/q/"+state+"/" +city +".json",
+  dataType : "jsonp",
+  success : function(parsed_json) {
+    
+  var location = parsed_json['location']['city'];
+  var temp_f = parsed_json['current_observation']['temp_f'];
+  var relative_humidity = parsed_json['current_observation']['relative_humidity'];
+  relative_humidity = relative_humidity.replace("%","");
+  relative_humidity = relative_humidity/100;
+  var wind_mph = parsed_json['current_observation']['wind_mph'];
+    
+    var concreteTemp = 0;
+    if(temp_f <= 10){
+      concreteTemp = 60;
+    }
+    else if(temp_f > 10 && temp_f <= 20){
+      concreteTemp = 65;
+    }
+    else if(temp_f > 20 && temp_f <= 60){
+      concreteTemp = 70;
+    }
+    else if(temp_f > 60 && temp_f <= 90){
+      concreteTemp = temp_f -2; 
+    }
+    else{
+      concreteTemp = 90;
+    }
+    
+    var evaporationRate = (Math.pow(concreteTemp,2.5) - (relative_humidity * (Math.pow(temp_f,2.5))))/*end first half*/
+* (1 + (0.4 * wind_mph)) * Math.pow(10,-6);
+    evaporationRate = Math.round( evaporationRate * 100 ) / 100;
+    
+
+    document.getElementById("temperature").innerHTML= temp_f;
+    document.getElementById("concreteTemperature").innerHTML= concreteTemp;
+    document.getElementById("humidity").innerHTML= (relative_humidity*100).toFixed(0);
+    document.getElementById("wind").innerHTML= wind_mph;  
+    document.getElementById("evaporation").innerHTML= evaporationRate;
+    
+    if(evaporationRate >= 0.20){
+    document.getElementById("evaporation").style.color = "#be1e2d";
+    document.getElementById("evap").style.color = "#be1e2d"
+  }
+  else{
+   document.getElementById("evaporation").style.color = "#000";
+   document.getElementById("evap").style.color = "#000";
+  } 
+  }
+  });
+    };
+</script> 
+    
+    
+    
+    
+    
+    
+<!--end javascript-->    
+<script>
+  
+</script>
+    
+        <section class="dContainer"><section class="icon">
+            <img src="img/temperature.svg"/>
+            <section class="name">Air temp</section></section>
+            <section class="numbers"><span id="temperature"></span><span style="vertical-align:text-top">&#176;</span>F</section>
+            
+        </section>
+        <section class="data" id="one"></section>
+    
+        <section class="dContainer"><section class="icon">
+            <img src="img/concreteTemperature.svg"/>
+            <section class="name">Concrete Temp</section></section>
+            <section class="numbers"><span id="concreteTemperature"></span><span style="vertical-align:text-top">&#176;</span>F</section>
+            <!---->
+        </section>
+        <section class="data" id="two"></section>
+        
+        <section class="dContainer"><section class="icon">
+            <img src="img/humidity.svg"/></section>
+            <section class="name">Humidity</section>
+            <section class="numbers"><span id="humidity"></span>%</section>
+            <!---->
+        </section>
+        <section class="data" id="one"></section>
+        
+        <section class="dContainer"><section class="icon">
+            <img src="img/wind.svg"/></section>
+            <section class="name">Wind</section>
+            <section class="numbers"><span id="wind"></span><span style="font-size:0.7em">mph</span></section>
+            <!---->
+        </section>
+        <section class="data" id="two"></section>
+        
+        <section class="dContainer"><section class="icon">
+            <img src="img/evaporationRate.svg"/></section>
+            <section class="name">Evaporation Rate</section>
+            <section class="numbers"><span id="evaporation"></span><span id="evap" style="font-size:0.6em">lb/ft&#178;/hr</span></section>
+            <!---->
+        </section>
+        <section class="data" id="one" ></section>
+        
+        <section class="dContainer"><section class="warning">
+            <div class="warningText">rate of evaporation is considered excessive 
+when it exceeds 0.20 lb/ft&#178;/hr</div>
+            <img src="img/wunderground.svg" href="http://www.wunderground.com"/></section>     
+            <!---->
+        </section>
+        <section class="dataLast" id="two" ></section>
+    </section>
+</section>
+    
+    
+</body>
+</html>
