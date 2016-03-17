@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="langdon/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="kelson/stylesheet.css">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="refresh" content="60" >
+    <script>
+    var games = new Array(
+                             [4,"Duke",false, 13, "UNC Wilmington", false, "11:15","cbs.svg"],
+                             [8,"Texas Tech", false,9, "Butler", false,"11:40","tru.svg"],
+                             [8, "Colorado", false, 9, "UConn", false, "12:30","tnt.svg"],
+                             [4, "Iowa State", false, 13, "Iona", false,"1:00","tbs.svg"],
+                             [5,"Baylor", false, 12, "Yale", false,"1:45","cbs.svg"],
+                             [1, "Virginia", false, 16, "Hampton", false,"2:10","tru.svg"],
+                             [1,"Kansas", false, 16, "Austin Peay", false,"3:00","tnt.svg"],
+                             [5,"Purdue", false, 12, "Little Rock",false,"3:30","tbs.svg"],
+                             [3, "Miami", false, 14, "Buffalo", false,"5:50","tnt.svg"],
+                             [5, "Indiana", false, 12, "Chattanooga", false, "6:10","cbs.svg"],
+                             [1, "N. Carolina",false, 16, "FGCU", false,"6:20","tbs.svg"],
+                             [3, "Utah", false, 14, "Fresno State", false,"6:27","tru.svg"],
+                             [6, "Arizona", false, 11, "Wichita State", false,"8:20","tnt.svg"],
+                             [4, "Kentucky", false, 13, "Stony Brook", false,"8:40","cbs.svg"],
+                             [8, "USC",false, 9, "Providence", false,"8:50","tbs.svg"],
+                             [6, "Seton Hall", false ,11, "Gonzaga", false, "8:57","tru.svg"]
+                             );
+
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <script>
+            for(var i=0; i<16; i++){
+
+                document.write(
+                    "<div class='game'>" +
+                        //team 1
+                        "<div class='team1' id=''>" +
+                            "<div class='rank'>" +games[i][0] + "</div>" +
+                            "<div class='teamName'>" + games[i][1] + "</div>" +
+                        "</div>" +
+                        //team 2
+                        "<div class='team2' id='other'>" +
+                            "<div class='rank'>" + games[i][3] + "</div>" +
+                            "<div class='teamName'>" + games[i][4] + "</div>" +
+                        "</div>" +
+                        //time, channel, etc
+                        "<div class='time'>" +
+                            "<div class='clock'><img src='clock.svg'/><span class='timeSpan'>"+ games[i][6] +"</span>" +
+                            "<div class='divide'></div></div>" +
+                            "<div class='network'><img src='"+games[i][7]+ "'/></div></div>" +
+                        "</div>" +
+
+                     "");
+                if(games[i][2] == true){
+                    document.getElementsByClassName('team1')[i].id = "winner";
+                }
+                if(games[i][5] == true){
+                    document.getElementsByClassName('team2')[i].id = "winner";
+                }
+
+            }
+
+        </script>
+  </div>
+
+
+</body>
+</html>
