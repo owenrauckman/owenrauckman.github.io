@@ -1,0 +1,166 @@
+{
+  "seo":{
+    "hreflangs": "en-US",
+    "page-title": "Garmin | United States",
+    "meta-keywords": "meta, words, go, here",
+    "meta-description": "Garmin is an awesome company, buy now!"
+  },
+  "promo-banner": {
+    "text": "<b>Free shipping</b> on all orders $99 and over",
+    "link": "https://buy.garmin.com/en-US/US/",
+    "font-color": "#FFF",
+    "background-color": "#0095CE",
+    "start-date": "2016-07-05T12:00:00",
+    "end-date": "2016-07-05T23:59:59"
+  },
+  "hero-slides": [
+    {
+      "start-date": "2016-07-05T12:00:00",
+      "end-date": "2016-07-05T23:59:59",
+      "kicker-type": "sale",
+      "kicker-text": "sale",
+      "kicker-heading": "Approach X40",
+      "kicker-description": "30% off today",
+      "image-alt": "Approach X40",
+      "images": {
+        "large": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/hero-golf-lg.jpg",
+        "medium": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/hero-golf-md.jpg",
+        "small": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/hero-golf-sm.jpg"
+      }
+    },
+    {
+      "start-date": "2016-07-05T12:00:00",
+      "end-date": "2016-07-05T23:59:59",
+      "kicker-type": "new",
+      "kicker-text": "new",
+      "kicker-heading": "Vivoactive HR",
+      "kicker-description": "GPS smartwatch with built-in sports apps",
+      "image-alt": "Vivoactive HR",
+      "images": {
+        "large": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/hero-vivo-lg.jpg",
+        "medium": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/hero-vivo-md.jpg",
+        "small": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/hero-vivo-sm.jpg"
+      }
+    }
+  ],
+  "product-carousel": {
+    "title": "New Arrivals",
+    "products": [
+      {
+        "start-date": "2016-07-05T12:00:00",
+        "end-date": "2016-07-05T23:59:59",
+        "title": "Fenix 3 HR",
+        "description": "Rugged GPS multisport watch with sapphire lens and wrist-based heart rate",
+        "image-alt": "Fenix 3 watch",
+        "image": "http://sitestage.garmin.com/en-US/home-page/images/devices/cat-feat-fenix.png",
+        "link": "http://www.garmin.com"
+      },
+      {
+        "start-date": "2016-07-05T12:00:00",
+        "end-date": "2016-07-05T23:59:59",
+        "title": "Vivo Series",
+        "description": "Meet the wearables that help you move a little more each day",
+        "image-alt": "Vivofit fitness tracker series",
+        "image": "http://sitestage.garmin.com/en-US/home-page/images/devices/cat-feat-vivo.png",
+        "link": "http://www.garmin.com"
+      },
+      {
+        "start-date": "2016-07-05T12:00:00",
+        "end-date": "2016-07-05T23:59:59",
+        "title": "Approach X40",
+        "description": "GPS golf band with wrist-based heart rate and activity tracking",
+        "image-alt": "Approach X40 fitness tracker",
+        "image": "http://sitestage.garmin.com/en-US/home-page/images/devices/cat-feat-approach.png",
+        "link": "http://www.garmin.com"
+      }
+    ]
+  },
+  "featured-markets": [
+      {
+        "start-date": "2016-07-05T12:00:00",
+        "end-date": "2016-07-05T23:59:59",
+        "title": "Wearables",
+        "description": "Explore all of our wrist-worn devices, from activity trackers to smartwatches.",
+        "cta": "Learn more",
+        "link": "http://www.garmin.com",
+        "image-alt": "Shop wearables",
+        "images": {
+          "large": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/product-highlight-wearables.png",
+          "medium": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/product-highlight-wearables-md.png",
+          "small": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/product-highlight-wearables-sm.png"
+        }
+      },
+      {
+        "start-date": "2016-07-05T12:00:00",
+        "end-date": "2016-07-05T23:59:59",
+        "title": "VIRB",
+        "description": "VIRB action cameras capture all the action in brillaint HD. In addition, they record data with sensors for speed, altitude, G-force, GPS position and more.",
+        "cta": "Learn more",
+        "link": "http://www.garmin.com",
+        "image-alt": "Shop virb",
+        "images": {
+          "large": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/product-highlight-virb.png",
+          "medium": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/product-highlight-virb-md.png",
+          "small": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/product-highlight-virb-sm.png"
+        }
+      }
+    ],
+  "segments": [
+    {
+      "heading": "Automotive",
+      "start-date": "2016-07-05T12:00:00",
+      "end-date": "2016-07-05T23:59:59",
+      "text": "Drive confidently with personal navigation devices designed for cars, trucks, motorcycles and RVs. Also shop dash cams, backup cameras and baby cameras for even more awareness when you're behind the wheel.",
+      "cta-text": "Learn more",
+      "image-alt": "Garmin Automotive",
+      "images": {
+        "large": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-automotive.jpg",
+        "medium": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-automotive.jpg",
+        "small": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-automotive.jpg"
+      }
+    },
+    {
+      "heading": "Sports & Recreation",
+      "start-date": "2016-07-05T12:00:00",
+      "end-date": "2016-07-05T23:59:59",
+      "text": "Track activity, golf, swim, hike, ride, run, even track and train dogs with innovative products made to keep up with your lifestyle.",
+      "cta-text": "Learn more",
+      "image-alt": "Garmin Sports & Rec",
+      "images": {
+        "large": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-sports-and-recreation.jpg",
+        "medium": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-sports-and-recreation.jpg",
+        "small": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-sports-and-recreation.jpg"
+      }
+    },
+    {
+      "heading": "Marine",
+      "start-date": "2016-07-05T12:00:00",
+      "end-date": "2016-07-05T23:59:59",
+      "text": "Find easy-to-understand, simple-to-use and dependable electronics for your time on the water.",
+      "cta-text": "Learn more",
+      "image-alt": "Garmin Marine",
+      "images": {
+        "large": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-marine.jpg",
+        "medium": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-marine.jpg",
+        "small": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-marine.jpg"
+      }
+    },
+    {
+      "heading": "Aviation",
+      "start-date": "2016-07-05T12:00:00",
+      "end-date": "2016-07-05T23:59:59",
+      "text": "Discover our full line of avionics, featuring industry-leading technology and endless possibilities.",
+      "cta-text": "Learn more",
+      "image-alt": "Garmin Aviation",
+      "images": {
+        "large": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-aviation.jpg",
+        "medium": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-aviation.jpg",
+        "small": "http://sitestage.garmin.com/en-US/home-page/images/lifestyle/markets-aviation.jpg"
+      }
+    }
+  ],
+  "email":{
+    "heading": "Stay Updated On Garmin News",
+    "placeholder": "sign up for news"
+  }
+}
