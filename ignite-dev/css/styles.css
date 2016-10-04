@@ -30,7 +30,7 @@ h1, h2, h3, p {
     top: 0;
     bottom: 0;
     content: ' ';
-    background: url("../../img/background.jpg") no-repeat;
+    background: url("http://owenrauckman.com/ignite-dev/img/background.jpg") no-repeat;
     background-size: cover;
     background-position: top right; }
     .ig__header__bg:after {
@@ -57,7 +57,7 @@ h1, h2, h3, p {
       position: absolute;
       top: -3px;
       right: calc(-36px - 0.5rem );
-      background: url("../../img/whistle.svg");
+      background: url("http://owenrauckman.com/ignite-dev//img/whistle.svg");
       height: 21px;
       width: 36px; }
   .ig__header__logo {
