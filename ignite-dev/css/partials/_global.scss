@@ -1,0 +1,22 @@
+body{
+  margin: 0 auto;
+  font-size: 16px;
+  width: 100%;
+  overflow-x: hidden;
+}
+h1, h2, h3, p{
+  margin-top: 0;
+}
+.mobile-hide{
+  @include mobile{
+    display: none;
+  }
+}
+.ig{
+  position: relative;
+  padding: 4rem;
+}
+.ig__container{
+  max-width: 960px;
+  margin: 0 auto;
+}
