@@ -225,13 +225,13 @@ h1, h2, h3, p {
 .ig__videos {
   position: relative; }
   .ig__videos--fall {
-    background: url("../../img/video-fall.jpg");
+    background: url("http://owenrauckman.com/ignite-dev/img/video-fall.jpg");
     background-size: cover;
     height: auto;
     min-height: 450px;
     width: auto; }
   .ig__videos--summer {
-    background: url("../../img/video-summer.jpg");
+    background: url("http://owenrauckman.com/ignite-dev/img/video-summer.jpg");
     background-size: cover;
     height: auto;
     min-height: 450px;
