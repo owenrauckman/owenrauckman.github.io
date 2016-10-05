@@ -49,6 +49,8 @@ h1, h2, h3, p {
     top: 2rem;
     right: calc(2rem + 44px);
     font-family: "industry";
+    font-style: italic;
+    font-weight: 400;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     color: #ECE94A; }
@@ -74,7 +76,8 @@ h1, h2, h3, p {
     margin: 0 auto; }
   .ig__header__nav {
     position: absolute;
-    bottom: -21px; }
+    bottom: -24px;
+    z-index: +1; }
   .ig__header__menu {
     position: relative;
     padding: 0;
@@ -84,16 +87,27 @@ h1, h2, h3, p {
     height: 43px; }
     .ig__header__menu::-webkit-scrollbar {
       display: none; }
+    .ig__header__menu a:link, .ig__header__menu a:visited, .ig__header__menu a:hover, .ig__header__menu a:active {
+      outline: none;
+      text-decoration: none;
+      color: #FFFFFF; }
     .ig__header__menu__item {
       font-size: 0.9rem;
       position: relative;
       min-width: 20px;
       display: inline-block;
       font-family: "industry";
+      font-weight: 400;
+      font-style: italic;
       text-transform: uppercase;
       letter-spacing: 0.1rem;
       color: #FFFFFF;
-      padding: 0 2rem; }
+      padding: 0 2rem;
+      transition: 0.3s ease-in-out; }
+      .ig__header__menu__item:hover {
+        transform: translateY(-3px); }
+      .ig__header__menu__item--active:hover {
+        transform: translateY(0); }
       .ig__header__menu__item--active:after {
         position: absolute;
         content: ' ';
@@ -113,6 +127,26 @@ h1, h2, h3, p {
   @media (min-width: 0) and (max-width: 767px) {
     .ig__info {
       padding: 4rem 1rem; } }
+  .ig__info__register {
+    position: relative;
+    padding: 8em 2em 4em 2em;
+    background: white;
+    display: none; }
+    .ig__info__register__cta {
+      cursor: pointer;
+      position: absolute;
+      bottom: -25px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      width: 120px;
+      font-family: "industry";
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: #23BCBA;
+      padding: 1em 2em;
+      z-index: +1; }
   .ig__info__container {
     display: flex;
     flex-direction: row;
@@ -147,22 +181,28 @@ h1, h2, h3, p {
       font-weight: 200;
       color: #3A3E41;
       font-family: "industry";
+      font-weight: 600;
       text-transform: uppercase;
       font-size: 1.1rem; }
       @media (min-width: 0) and (max-width: 580px) {
         .ig__info__heading__copy {
           text-align: center; } }
   .ig__info__content {
+    font-family: "acumin-pro",sans-serif;
     width: 80%; }
     @media (min-width: 0) and (max-width: 580px) {
       .ig__info__content {
         width: 100%; } }
+    .ig__info__content__list {
+      padding: 0em 2em 2em 2em; }
+      .ig__info__content__list__item {
+        font-weight: 200;
+        list-style: none;
+        color: #838b91; }
     .ig__info__content__copy {
-      font-family: "acumin-pro",sans-serif;
       font-weight: 200;
-      padding: 2rem; }
+      padding: 2rem 2rem 0 2rem; }
     .ig__info__content__table {
-      font-family: "acumin-pro",sans-serif;
       font-weight: 200;
       margin: 2rem; }
       @media (min-width: 0) and (max-width: 580px) {
@@ -181,5 +221,89 @@ h1, h2, h3, p {
       .ig__info__table tr td {
         padding: 20px;
         text-align: center; }
+
+.ig__videos {
+  position: relative; }
+  .ig__videos--fall {
+    background: url("../../img/video-fall.jpg");
+    background-size: cover;
+    height: auto;
+    min-height: 450px;
+    width: auto; }
+  .ig__videos--summer {
+    background: url("../../img/video-summer.jpg");
+    background-size: cover;
+    height: auto;
+    min-height: 450px;
+    width: auto; }
+  .ig__videos--overlay:after {
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .ig__videos__play {
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    z-index: +1; }
+  .ig__videos__youtube {
+    z-index: +2;
+    display: none; }
+
+.ig__footer {
+  padding: 2em;
+  background: #E6E7E8;
+  font-family: "acumin-pro",sans-serif;
+  font-weight: 200;
+  display: flex;
+  flex-direction: row; }
+  @media (min-width: 0) and (max-width: 767px) {
+    .ig__footer {
+      flex-direction: column; } }
+  .ig__footer__contact {
+    padding: 0;
+    margin: 0; }
+    @media (min-width: 0) and (max-width: 580px) {
+      .ig__footer__contact {
+        justify-content: center;
+        margin-bottom: 2em; } }
+    .ig__footer__contact__item {
+      display: inline;
+      margin-right: 0.5em; }
+      @media (min-width: 0) and (max-width: 580px) {
+        .ig__footer__contact__item {
+          display: block;
+          text-align: center; } }
+      .ig__footer__contact__item:first-child {
+        font-weight: 600; }
+      .ig__footer__contact__item:last-child {
+        margin-right: 0; }
+      .ig__footer__contact__item a:link, .ig__footer__contact__item a:active, .ig__footer__contact__item a:visited {
+        color: #3A3E41; }
+  .ig__footer__info {
+    flex: 1 50%; }
+  .ig__footer__social {
+    flex: 1 50%;
+    text-align: right; }
+    @media (min-width: 0) and (max-width: 580px) {
+      .ig__footer__social {
+        text-align: center; } }
+    .ig__footer__social a:link, .ig__footer__social a:hover, .ig__footer__social a:active {
+      outline: none;
+      border: none;
+      cursor: pointer; }
+    .ig__footer__social svg {
+      height: 20px;
+      width: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
