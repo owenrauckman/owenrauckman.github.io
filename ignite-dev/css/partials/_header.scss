@@ -66,6 +66,9 @@
       overflow-x: scroll;
       max-width: 100vw;
       height: 43px;
+      @include phone{
+        display: flex;
+      }
       &::-webkit-scrollbar {
           display: none;
       }
@@ -74,9 +77,14 @@
           outline: none;
           text-decoration: none;
           color: $white;
+          @include phone{
+            width: calc(100vw/3);
+            text-align: center;
+          }
         }
       }
       &__item{
+        width: auto;
         font-size: 0.9rem;
         position: relative;
         min-width: 20px;
@@ -88,6 +96,9 @@
         letter-spacing: 0.1rem;
         color: $white;
         padding: 0 2rem;
+        @include phone{
+          padding: 0 1rem;
+        }
         transition: 0.3s ease-in-out;
         &:hover{
           transform: translateY(-3px);

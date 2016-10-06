@@ -14,4 +14,21 @@ $(document).ready(function(){
     $('.ig__info__register').slideToggle();
   })
 
+  $('.x-out').click(function(){
+    $('.ig__coaches').fadeOut();
+  })
+
+  $('.ig__header__meet').click(function(){
+    $('.ig__coaches').fadeIn();
+  })
+
+  $('.ig__coaches__profiles__coach').click(function(e){
+    var name = e.target.id;
+    $('.ig__coaches__profiles__coach').removeClass('ig__coaches__profiles__coach--active');
+    $(this).addClass('ig__coaches__profiles__coach--active');
+    //show the profile
+    $('.ig__info--coaches').removeClass('coach-active');
+    $('#' + name + '-bio').addClass('coach-active');
+  });
+
 });
