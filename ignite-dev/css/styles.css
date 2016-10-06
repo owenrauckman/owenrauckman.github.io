@@ -3,6 +3,10 @@ html, body {
   padding: 0;
   height: 100%; }
 
+    @media (min-width: 0) and (max-width: 767px) {
+      .ig__header__meet {
+        width: 200px; } }
+
 body {
   margin: 0 auto;
   font-size: 16px;
