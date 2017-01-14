@@ -1,0 +1,140 @@
+.landing{
+  &__hero{
+    height: 50vh;
+    width: 100%;
+    overflow-x: hidden;
+    // background: linear-gradient( 135deg, #2090FF, #2C8AFF);
+    background: linear-gradient( 135deg, #35427A, #06172C);
+    position: relative;
+    &__container{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      &__heading{
+        text-align: left;
+        width: 80vw;
+        margin: 0 auto 1rem auto;
+        font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 300; font-style: italic; letter-spacing: 0.025rem; text-transform: uppercase;
+        color: rgba(255,255,255,0.6); //todo break into other file
+      }
+    }
+    &__card-container{
+      position: relative;
+      height: 50%;
+      display: flex;
+      align-items: center;
+    }
+    &__card{
+      margin:0;
+      list-style: none;
+      border-radius: 5px;
+      box-shadow: 0px 0px 8px #0F2139;
+      width: 80vw;
+      height: 100%;
+      background: white;
+      counter-increment: card;
+      position: absolute;
+      display:none;
+
+      &__heading{
+        font-family: 'Roboto', sans-serif; font-size: 2rem; font-weight: 700; letter-spacing: 0.01rem; text-transform: uppercase;
+        color: rgba(255,255,255,0.95);
+        position: absolute;
+        top: 50%; left: 0; right: 0; margin: 0 auto;
+        transform: translateY(-25%);
+        text-align: center;
+      }
+      // Colors for cards (add more if needed)
+      &.navy{
+        &:before{
+          content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+          background-image: linear-gradient(to right, rgba(0,20,50,0.5), rgba(0,20,50,0.8));
+          border-radius: 5px;
+        }
+      }
+      &.orange{
+        &:before{
+          content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+          background-image: linear-gradient(to right, rgba(243,174,93,0.5), rgba(243,174,93,0.8));
+          border-radius: 5px;
+        }
+      }
+      &.lightblue{
+        &:before{
+          content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+          background-image: linear-gradient(to right, rgba(0,187,211,0.5), rgba(0,187,211,0.8));
+          border-radius: 5px;
+        }
+      }
+      &.green{
+        &:before{
+          content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+          background-image: linear-gradient(to right, rgba(0,211,148,0.5), rgba(0,211,148,0.8));
+          border-radius: 5px;
+        }
+      }
+      &--active, &--previous, &--next, &--animate-previous, &--animate-next{
+        display: block;
+        transition: opacity 0.05s ease, transform 0.3s ease;
+        animation-name: hideDuringSwipe;
+        animation-duration: 0.3s;
+      }
+      &--active{
+        margin: 0 auto;
+        left:0; right:0;
+        opacity: 1;
+        animation-duration: 0.4s;
+        &-next{
+          z-index: +1;
+          animation-name: becomeActiveNext;
+        }
+        &-previous{
+          z-index: +1;
+          animation-name: becomeActivePrevious;
+        }
+      }
+      &--previous{
+        transform: translateX(-90%)scale(0.9);
+        opacity: 0.2;
+        &:before{
+          background-image: linear-gradient(to right, transparentize(#F3AE5D, 0.75), transparentize(#F3AE5D, 0.5)); //todo remove this only temp
+          border-radius: 5px;
+        }
+      }
+      &--next{
+        transform: translateX(115%)scale(0.9);
+        opacity: 0.2;
+        &:before{
+          background-image: linear-gradient(to right, transparentize(#4CB7F5, 0.75), transparentize(#4CB7F5, 0.5)); //todo remove this only temp
+          border-radius: 5px;
+        }
+      }
+      &--animate-previous{
+        transform: translateX(-200%) !important;
+      }
+      &--animate-next{
+        transform: translateX(200%) !important;
+      }
+    }
+  }
+}
+
+// animations todo move out of here
+@keyframes becomeActiveNext {
+    0%   {transform: translateX(20%)scale(0.9);}
+    50%  {transform: translateX(5%)scale(1.1);}
+    100% {transform: translateX(0%)scale(1.0);}
+}
+@keyframes becomeActivePrevious {
+    0%   {transform: translateX(-20%)scale(0.9);}
+    50%  {transform: translateX(-5%)scale(1.1);}
+    100% {transform: translateX(0%)scale(1.0);}
+}
+
+@keyframes hideDuringSwipe{
+  0%   {opacity: 0.2;}
+  1%  {opacity: 0;}
+  100% {opacity: 0.2;}
+}

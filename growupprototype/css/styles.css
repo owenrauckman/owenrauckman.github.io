@@ -1,0 +1,160 @@
+body {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%; }
+
+.navigation {
+  height: 50px;
+  width: 100%;
+  background: white;
+  border-top: solid 1px gray;
+  position: fixed;
+  bottom: 0;
+  z-index: +1; }
+
+.landing__hero {
+  height: 50vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #35427A, #06172C);
+  position: relative; }
+  .landing__hero__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+    .landing__hero__container__heading {
+      text-align: left;
+      width: 80vw;
+      margin: 0 auto 1rem auto;
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.025rem;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6); }
+  .landing__hero__card-container {
+    position: relative;
+    height: 50%;
+    display: flex;
+    align-items: center; }
+  .landing__hero__card {
+    margin: 0;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px #0F2139;
+    width: 80vw;
+    height: 100%;
+    background: white;
+    counter-increment: card;
+    position: absolute;
+    display: none; }
+    .landing__hero__card__heading {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.01rem;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.95);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transform: translateY(-25%);
+      text-align: center; }
+    .landing__hero__card.navy:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to right, rgba(0, 20, 50, 0.5), rgba(0, 20, 50, 0.8));
+      border-radius: 5px; }
+    .landing__hero__card.orange:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to right, rgba(243, 174, 93, 0.5), rgba(243, 174, 93, 0.8));
+      border-radius: 5px; }
+    .landing__hero__card.lightblue:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to right, rgba(0, 187, 211, 0.5), rgba(0, 187, 211, 0.8));
+      border-radius: 5px; }
+    .landing__hero__card.green:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to right, rgba(0, 211, 148, 0.5), rgba(0, 211, 148, 0.8));
+      border-radius: 5px; }
+    .landing__hero__card--active, .landing__hero__card--previous, .landing__hero__card--next, .landing__hero__card--animate-previous, .landing__hero__card--animate-next {
+      display: block;
+      transition: opacity 0.05s ease, transform 0.3s ease;
+      animation-name: hideDuringSwipe;
+      animation-duration: 0.3s; }
+    .landing__hero__card--active {
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      opacity: 1;
+      animation-duration: 0.4s; }
+      .landing__hero__card--active-next {
+        z-index: +1;
+        animation-name: becomeActiveNext; }
+      .landing__hero__card--active-previous {
+        z-index: +1;
+        animation-name: becomeActivePrevious; }
+    .landing__hero__card--previous {
+      transform: translateX(-90%) scale(0.9);
+      opacity: 0.2; }
+      .landing__hero__card--previous:before {
+        background-image: linear-gradient(to right, rgba(243, 174, 93, 0.25), rgba(243, 174, 93, 0.5));
+        border-radius: 5px; }
+    .landing__hero__card--next {
+      transform: translateX(115%) scale(0.9);
+      opacity: 0.2; }
+      .landing__hero__card--next:before {
+        background-image: linear-gradient(to right, rgba(76, 183, 245, 0.25), rgba(76, 183, 245, 0.5));
+        border-radius: 5px; }
+    .landing__hero__card--animate-previous {
+      transform: translateX(-200%) !important; }
+    .landing__hero__card--animate-next {
+      transform: translateX(200%) !important; }
+
+@keyframes becomeActiveNext {
+  0% {
+    transform: translateX(20%) scale(0.9); }
+  50% {
+    transform: translateX(5%) scale(1.1); }
+  100% {
+    transform: translateX(0%) scale(1); } }
+@keyframes becomeActivePrevious {
+  0% {
+    transform: translateX(-20%) scale(0.9); }
+  50% {
+    transform: translateX(-5%) scale(1.1); }
+  100% {
+    transform: translateX(0%) scale(1); } }
+@keyframes hideDuringSwipe {
+  0% {
+    opacity: 0.2; }
+  1% {
+    opacity: 0; }
+  100% {
+    opacity: 0.2; } }
+
+/*# sourceMappingURL=styles.css.map */

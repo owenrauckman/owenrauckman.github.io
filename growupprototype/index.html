@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,700i" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!--home -->
+    <section class="landing__hero">
+      <div class="landing__hero__container">
+        <h2 class="landing__hero__container__heading">Recommended For You</h2>
+        <div class="landing__hero__card-container">
+          <div class="landing__hero__card landing__hero__card--previous orange" style="background: url('img/credit-cards.png') no-repeat; background-size:cover" data-index="1"><h2 class="landing__hero__card__heading">Credit Cards</h2></div>
+          <div class="landing__hero__card landing__hero__card--active navy" style="background: url('img/house.png') no-repeat; background-size:cover" data-index="2"><h2 class="landing__hero__card__heading">Rent</h2></div>
+          <div class="landing__hero__card landing__hero__card--next lightblue" style="background: url('img/stocks.png') no-repeat; background-size:cover" data-index="3"><h2 class="landing__hero__card__heading">Stocks</h2></div>
+          <div class="landing__hero__card green" style="background: url('img/taxes.png') no-repeat; background-size:cover" data-index="4"><h2 class="landing__hero__card__heading">Taxes</h2></div>
+
+        </div>
+      </div>
+    </section>
+    <!-- <p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p><p>h</p> -->
+    <!-- end home -->
+
+    <nav class="navigation">
+      test
+    </nav>
+
+    <!-- livereload -->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+    <!-- other scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.15/jquery.touchSwipe.js"></script>
+
+    <!-- custom scripts -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        var moveByElem = function(elem, direction) {
+          $(".landing__hero__card--animate-previous").removeClass("landing__hero__card--animate-previous");
+          $(".landing__hero__card--animate-next").removeClass("landing__hero__card--animate-next");
+          $('.landing__hero__card--previous').addClass("landing__hero__card--animate-previous").removeClass("landing__hero__card--previous");
+          $('.landing__hero__card--next').addClass("landing__hero__card--animate-next").removeClass("landing__hero__card--next");
+          var $prev = elem.prev()[0] != null ? elem.prev() : $('.landing__hero__card:last-child');
+          var $next = elem.next()[0] != null ? elem.next() : $('.landing__hero__card:first-child');
+
+          //Add/Remove specific classes so that elements can keep their respective colors -- right is previous, left is next
+          if(direction == 'right' || direction == 'up'){ //oking
+            elem.addClass('landing__hero__card landing__hero__card--active landing__hero__card--active-previous').removeClass('landing__hero__card--next landing__hero__card--animate-next landing__hero__card--animate-previous landing__hero__card--active-next');
+          }
+          else if(direction == 'left' || direction == 'down'){
+            elem.addClass('landing__hero__card landing__hero__card--active landing__hero__card--active-next').removeClass('landing__hero__card--previous landing__hero__card--animate-next landing__hero__card--animate-previous landing__hero__card--active-previous ');
+          }
+          //todo maybe add data attribute for color?
+          $next.addClass('landing__hero__card landing__hero__card--next').removeClass('landing__hero__card--animate-previous landing__hero__card--active landing__hero__card--previous landing__hero__card--active-previous landing__hero__card--active-next landing__hero__card--active-previous landing__hero__card--active-next');
+          $prev.addClass('landing__hero__card landing__hero__card--previous').removeClass('landing__hero__card--active landing__hero__card--next landing__hero__card--animate-next landing__hero__card--active-previous landing__hero__card--active-next landing__hero__card--active-previous landing__hero__card--active-next');
+        }
+
+        // disable down scrolling in hero for a more native experience
+        $('.landing__hero').bind('touchmove', function(e){e.preventDefault();});
+
+        $(".landing__hero").swipe( {
+          swipe:function(event, direction) {
+            var $elem = (direction == 'right' || direction == 'up') ? $('.landing__hero__card--previous') : $('.landing__hero__card--next'); //todo add down/up too
+            moveByElem($elem, direction);
+          }
+        });
+
+      });
+    </script>
+  </body>
+
+</html>
