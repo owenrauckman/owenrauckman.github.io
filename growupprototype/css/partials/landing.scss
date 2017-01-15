@@ -6,6 +6,7 @@
     // background: linear-gradient( 135deg, #2090FF, #2C8AFF);
     background: linear-gradient( 135deg, #35427A, #06172C);
     position: relative;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
     &__container{
       position: relative;
       display: flex;
@@ -15,9 +16,9 @@
       &__heading{
         text-align: left;
         width: 80vw;
-        margin: 0 auto 1rem auto;
+        margin: 2rem auto 1rem auto;
         font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 300; font-style: italic; letter-spacing: 0.025rem; text-transform: uppercase;
-        color: rgba(255,255,255,0.6); //todo break into other file
+        color: transparentize($white, 0.4)
       }
     }
     &__card-container{
@@ -116,6 +117,21 @@
       }
       &--animate-next{
         transform: translateX(200%) !important;
+      }
+    }
+    &__dot-container{
+      display: flex;
+      justify-content: center;
+      padding: 2rem 0 0 0;
+      &__dot{
+        height: 7.5px;
+        width: 7.5px;
+        border-radius: 10px;
+        background: transparentize($white, 0.5);
+        margin: 0 0.25rem;
+        &--active{
+          background: $white;
+        }
       }
     }
   }
