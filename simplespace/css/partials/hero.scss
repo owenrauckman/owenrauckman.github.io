@@ -34,13 +34,13 @@
   }
   &__copy{
     display: block;
-    max-width: 450px;
+    max-width: 375px;
     margin: 0 auto;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     letter-spacing: 0.025rem;
     line-height: 1.5rem;
-    font-weight: 400;
-    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
     color: $white;
     text-align: center;
   }

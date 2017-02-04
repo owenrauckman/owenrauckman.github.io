@@ -4,29 +4,43 @@
   box-shadow: 0px 0px 20px transparentize($black, 0.75);
   min-height: 400px;
   margin: 0 auto;
+  margin-top: -1rem; // makes up for global pad
   width: 100%;
   &__heading{
-    padding: 3rem 2rem 0 3rem;
+    padding: 2rem 2rem 1rem 2rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    color: $blue-text;
+    color: $blue-dull;
     font-size: 1rem;
+    position: relative;
+    margin-bottom: 2rem;
+    &:after{
+      position: absolute;
+      bottom: -0.5rem;
+      display: block;
+      content: '';
+      width: 75px;
+      height: 2px;
+      background: $blue-dull;
+    }
   }
   &__container{
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 0rem 2rem 1rem 1rem;
   }
   &__checkbox{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 0;
     &__button{
       width: calc(100% - 2rem); // 2rem for container margin
+      padding: 0.75rem 1rem;
       @include breakpoint(phone){
         width: calc(50% - 2rem); // 2rem for container margin
       }
       @include breakpoint(desktop){
         width: calc((100% /3) - 2rem); // 2rem for container margin
+        padding: 1rem;
       }
-      padding: 1rem;
       input{
         &[type=checkbox]{
           display: none;
@@ -64,13 +78,18 @@
     }
   }
   &__button-container{
-    justify-content: flex-end;
-    padding: 1rem 2rem 0 0;
+    justify-content: center;
+    margin-left: 2rem;
+    @include breakpoint(desktop){
+      margin-left: 0;
+      justify-content: flex-end;
+    }
+    padding: 1rem 2rem 1rem 0;
   }
   &__progress-bar{
     width: 34%; // todo: use JS to make this width dynamic
-    height: 7px;
-    border-radius: 0px 7px 7px 7px;
+    height: 5px;
+    border-radius: 0px 5px 5px 5px;
     background: linear-gradient(to left, $java, $turquoise);
   }
 }

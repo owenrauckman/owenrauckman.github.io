@@ -1,9 +1,9 @@
 .services{
-  padding: 4rem 0;
+  padding: 2rem 0;
   background: linear-gradient(to bottom right, $java, $turquoise);
   &__background{
     position: absolute;
-    margin-top: -4.1rem;
+    margin-top: -2.1rem;
     min-height: 600px;
     width: 100%;
     background: white;
@@ -18,9 +18,8 @@
   &__box{
     box-shadow: 0px 0px 20px transparentize($black, 0.75);
     width: 100%;
-    margin: 2rem 0;
+    margin: 1rem 0 2rem 0;
     @include breakpoint(tablet){
-      margin: 3rem 0;
       width: calc(50% - 2rem); // 2rem for container margin
     }
     &__photo{

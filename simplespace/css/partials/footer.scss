@@ -1,5 +1,5 @@
 .footer{
-  padding: 3rem 0 1rem 0;
+  padding: 2rem 0 2rem 0;
   @include breakpoint(tablet){
     padding: 5rem 0;
   }
@@ -29,16 +29,26 @@
   &__info{
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
+    @include breakpoint(tablet){
+      margin-top:0;
+    }
     &__social{
       padding: 0;
       display: flex;
       justify-content: center;
       @include breakpoint(tablet){
         justify-content: flex-end;
+        margin-bottom: 2rem;
       }
       &__icon{
         list-style: none;
         margin: 0 1rem;
+        @include breakpoint(tablet){
+          &:last-child{
+            margin: 0 0 0 1rem;
+          }
+        }
         svg{
           height: 50px;
           width: 50px;
@@ -46,14 +56,16 @@
       }
     }
     &__address{
-      font-family: 'Roboto Mono', monospace;
+      font-family: 'Roboto', sans-serif;
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 400;
       font-style: italic;
-      color: $gray-medium;
+      color: $blue-dull;
       text-align: center;
+      margin-top: 2rem;
       @include breakpoint(tablet){
         text-align: right;
+        margin-top: 0;
       }
     }
   }
