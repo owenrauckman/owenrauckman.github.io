@@ -10,14 +10,15 @@
   }
   &__box{
     width: 100%;
-    text-align: center;
     @include breakpoint(tablet){
       width: 50%;
     }
     &--logo{
       margin-bottom: 2rem;
+      text-align: center;
       @include breakpoint(tablet){
         margin-bottom: 0;
+        text-align: left;
       }
     }
   }

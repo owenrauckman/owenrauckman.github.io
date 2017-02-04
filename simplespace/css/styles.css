@@ -353,16 +353,17 @@ body {
     align-items: center;
     flex-wrap: wrap; }
   .footer__box {
-    width: 100%;
-    text-align: center; }
+    width: 100%; }
     @media (min-width: 768px) {
       .footer__box {
         width: 50%; } }
     .footer__box--logo {
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      text-align: center; }
       @media (min-width: 768px) {
         .footer__box--logo {
-          margin-bottom: 0; } }
+          margin-bottom: 0;
+          text-align: left; } }
   .footer__logo {
     height: 57.4875px;
     width: 200.475px; }
