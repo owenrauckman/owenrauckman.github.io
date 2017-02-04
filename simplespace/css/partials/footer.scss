@@ -1,0 +1,59 @@
+.footer{
+  padding: 3rem 0 1rem 0;
+  @include breakpoint(tablet){
+    padding: 5rem 0;
+  }
+  &__container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__box{
+    width: 100%;
+    text-align: center;
+    @include breakpoint(tablet){
+      width: 50%;
+    }
+    &--logo{
+      margin-bottom: 2rem;
+      @include breakpoint(tablet){
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__logo{
+    height: 57.4875px;
+    width: 200.475px;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    &__social{
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      @include breakpoint(tablet){
+        justify-content: flex-end;
+      }
+      &__icon{
+        list-style: none;
+        margin: 0 1rem;
+        svg{
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+    &__address{
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.9rem;
+      font-weight: 500;
+      font-style: italic;
+      color: $gray-medium;
+      text-align: center;
+      @include breakpoint(tablet){
+        text-align: right;
+      }
+    }
+  }
+}

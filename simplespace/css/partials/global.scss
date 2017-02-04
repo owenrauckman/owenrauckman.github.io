@@ -1,0 +1,81 @@
+body{
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+.g{
+  &__container{
+    position: relative;
+    width: calc(100% - 4rem);
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  &__flex{
+    display: flex;
+    &--full{
+      width: 100%;
+    }
+    &--half{
+      width: 50%;
+    }
+  }
+  &__section-heading{
+    color: $blue-text;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    position: relative;
+    margin-bottom: 6rem;
+    &:after{
+      position: absolute;
+      bottom: -2.5rem;
+      display: block;
+      content: '';
+      width: 100px;
+      height: 0.25rem;
+      background: $blue-text;
+    }
+  }
+  &__button{
+    padding: 0.75rem 1.5rem;
+    border-radius: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+      cursor: pointer;
+    }
+    &--white{
+      background: transparent;
+      border: solid 1px $orange;
+      color: $orange;
+      &:hover{
+        background: $orange;
+        color: $white;
+      }
+    }
+    &--white-white{
+      background: transparent;
+      border: solid 1px white;
+      color: $white;
+      &:hover{
+        border: solid 1px transparent;
+        background: $blue-text;
+        color: $white;
+      }
+    }
+    &--orange{
+      background: $orange;
+      color: $white;
+      border: solid 1px transparent;
+      &:hover{
+        background: darken($orange, 10%);
+        color: $white;
+      }
+    }
+  }
+}

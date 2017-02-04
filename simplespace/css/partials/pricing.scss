@@ -1,0 +1,59 @@
+.pricing{
+  padding: 4rem 0;
+  &__copy{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    color: $blue-text;
+    max-width: 700px;
+    font-size: 0.9rem;
+    line-height: 2rem;
+  }
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  &__box{
+    border: solid 1px $blue-text;
+    text-align: center;
+    padding: 4rem;
+    margin: 1px 0;
+    &:first-child{
+      margin-top: 2rem;
+    }
+    width: calc(100% );
+    @include breakpoint(tablet){
+      width: calc((100% / 3) - 8rem - 3px - 2px);
+      margin: 2rem 1px;
+    }
+    &--dark{
+      background: $blue-text;
+      color: $white;
+    }
+    &--light{
+      background: transparent;
+      color: $blue-text;
+    }
+    &__price{
+      font-size: 2rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      span{
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+    }
+    &__type{
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 400;
+      margin: 0;
+    }
+    &__people{
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 300;
+      font-style: italic;
+      margin: 0;
+    }
+  }
+}

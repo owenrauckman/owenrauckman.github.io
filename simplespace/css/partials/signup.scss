@@ -1,0 +1,76 @@
+.signup{
+  background: $white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px transparentize($black, 0.75);
+  min-height: 400px;
+  margin: 0 auto;
+  width: 100%;
+  &__heading{
+    padding: 3rem 2rem 0 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: $blue-text;
+    font-size: 1rem;
+  }
+  &__container{
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  &__checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    &__button{
+      width: calc(100% - 2rem); // 2rem for container margin
+      @include breakpoint(phone){
+        width: calc(50% - 2rem); // 2rem for container margin
+      }
+      @include breakpoint(desktop){
+        width: calc((100% /3) - 2rem); // 2rem for container margin
+      }
+      padding: 1rem;
+      input{
+        &[type=checkbox]{
+          display: none;
+          &:checked{
+            + label span{
+              background: $blue-dull;
+              box-shadow: inset 0 0 0 5px $white;
+            }
+          }
+        }
+      }
+      label{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        color: $blue-dull;
+        display: block;
+        line-height: 2rem;
+        font-size: 0.9rem;
+        span {
+          display: block;
+          background: transparent;
+          border: solid 2px $blue-dull;
+          width: 2rem;
+          height: 2rem;
+          cursor:pointer;
+          border-radius:  50%;
+          margin: 0 1rem 0 0;
+          float: left;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__button-container{
+    justify-content: flex-end;
+    padding: 1rem 2rem 0 0;
+  }
+  &__progress-bar{
+    width: 34%; // todo: use JS to make this width dynamic
+    height: 7px;
+    border-radius: 0px 7px 7px 7px;
+    background: linear-gradient(to left, $java, $turquoise);
+  }
+}
