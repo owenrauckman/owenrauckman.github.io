@@ -1,0 +1,156 @@
+.hero{
+  width: calc(100% - 4rem);
+  min-height: 300px;
+  background: linear-gradient($transparent-green, $transparent-green), url('../../img/landing/hero.jpg') no-repeat;
+  background-size: cover;
+  background-position: center 15%;
+  padding: 0 2rem;
+  position: relative;
+  &__heading, &__heading2{
+    font-family: $montserrat;
+    letter-spacing: 1px;
+    color: $white;
+    text-shadow: 0px 0px 15px $shadow;
+    text-transform: uppercase;
+    position: relative;
+  }
+  &__heading{
+    margin: 4rem 0 5rem 0; // 5rem to make up for :after on heading
+    font-weight: 700;
+    max-width: 300px;
+    font-size: 1.5rem;
+    &:after{
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      content: '';
+      height: 4px;
+      width: 2rem;
+      background: $white;
+    }
+  }
+  &__heading2{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 2rem 0 0 0;
+    padding-bottom: 0;
+  }
+  &__form{
+    max-width: 940px;
+    background: $white;
+    border-radius: $radius;
+    width: 100%;
+    box-shadow: 0 0 15px $shadow;
+    display: flex;
+    position: relative;
+    top: 30px;
+    flex-wrap: wrap;
+    @include breakpoint('phone'){
+      flex-wrap: nowrap;
+    }
+    &__input{
+      font-family: $montserrat;
+      height: 60px;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      border: none;
+      border-bottom: solid 1px transparentize($gray-medium, 0.5);
+      color: $gray-medium;
+      -webkit-appearance: none; //ios override
+      border-radius: 0;
+      &:nth-child(4){
+        border-bottom: none;
+      }
+      text-indent: 2rem;
+      &:focus{
+        outline: none;
+      }
+      width: 100%;
+      &:nth-child(1){
+        border-radius: $radius $radius 0 0;
+      }
+      // Desktop sizes
+      @include breakpoint('phone'){
+        border-right: solid 1px transparentize($gray-medium, 0.5);
+        border-bottom: none;
+        &:nth-child(1){ width: 30%; border-radius: $radius 0 0 $radius}
+        &:nth-child(2){ width: 20%; }
+        &:nth-child(3){ width: 15%; }
+        &:nth-child(4){ width: 15%; border-right: none;}
+      }
+      &::-webkit-input-placeholder { color: $gray-medium; }
+      &::-moz-placeholder { color: $gray-medium; }
+      &:-ms-input-placeholder { color: $gray-medium; }
+    }
+    &__submit{
+      background: $orange;
+      font-family: $montserrat;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      color: $white;
+      border-radius: 0 0 $radius $radius;
+      border: none;
+      outline: none;
+      height: 60px;
+      -webkit-appearance: none; //ios override
+      // Desktop size
+      width: 100%;;
+      transition: 0.2s ease-in background;
+      @include breakpoint('phone'){
+        width: 20%;
+        border-radius: 0 $radius $radius 0;
+      }
+      &:hover{
+        cursor: pointer;
+        background: darken($orange, 5%);
+      }
+    }
+  }
+}
+// Other landing page styles
+.landing{
+  position: relative;
+  padding: 2rem;
+  top: 30px;
+  height: auto;
+  width: calc(100% - 4rem);
+  &__copy{
+    max-width: 450px;
+    color: $gray-medium;
+    font-family: $rubik;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 0.25px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  &__services{
+    margin: 2rem 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    &__item{
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(50% - 8rem);
+      @include breakpoint('phone'){
+        width: auto;
+      }
+      &__icon{
+        height: 50px;
+        width: 50px;
+        text-align: center;
+      }
+      &__copy{
+        font-family: $rubik;
+        color: $gray-medium;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
