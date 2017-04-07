@@ -170,7 +170,7 @@ body {
 .hero {
   width: calc(100% - 4rem);
   min-height: 300px;
-  background: linear-gradient(rgba(27, 185, 120, 0.85), rgba(27, 185, 120, 0.85)), url("../../img/landing/hero.jpg") no-repeat;
+  background: linear-gradient(rgba(27, 185, 120, 0.85), rgba(27, 185, 120, 0.85)), url("http://owenrauckman.com/greenagain/img/landing/hero.jpg") no-repeat;
   background-size: cover;
   background-position: center 15%;
   padding: 0 2rem;
@@ -316,7 +316,7 @@ body {
 .page {
   position: relative; }
   .page__services {
-    background: linear-gradient(rgba(27, 185, 120, 0.85), rgba(27, 185, 120, 0.85)), url("../../img/services/bg.jpg") no-repeat;
+    background: linear-gradient(rgba(27, 185, 120, 0.85), rgba(27, 185, 120, 0.85)), url("http://owenrauckman.com/greenagain/img/services/bg.jpg") no-repeat;
     background-size: cover;
     background-position: center 15%;
     padding: 1rem 2rem; }
