@@ -1,13 +1,18 @@
-body {
-  margin: 0 auto;
+html, body {
+  margin: 0;
   height: 100%;
-  width: 100%;
   font-size: 16px;
   position: relative; }
 
 .g__container {
   max-width: 940px;
   margin: 0 auto; }
+  .g__container--map {
+    background: white;
+    max-width: none;
+    width: 100%;
+    position: absolute;
+    top: 0; }
 .g__heading {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
@@ -34,7 +39,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 80px; }
+  height: 90px; }
   .navigation--light .navigation__nav {
     margin-right: 2rem; }
   .navigation--light .navigation__logo {
@@ -66,14 +71,14 @@ body {
     stroke: #1bb978; }
   .navigation__logo {
     height: auto;
-    width: 80px;
+    width: 90px;
     background: rgba(255, 255, 255, 0.9);
     padding: 1rem;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
     border-radius: 0px 0px 10px 10px; }
     .navigation__logo__image {
       height: auto;
-      width: 80px;
+      width: 90px;
       mix-blend-mode: multiply; }
   .navigation__nav {
     display: flex;
@@ -170,9 +175,9 @@ body {
 .hero {
   width: calc(100% - 4rem);
   min-height: 300px;
-  background: linear-gradient(rgba(27, 185, 120, 0.85), rgba(27, 185, 120, 0.85)), url("http://owenrauckman.com/greenagain/img/landing/hero.jpg") no-repeat;
+  background: linear-gradient(rgba(27, 185, 120, 0.55), rgba(27, 185, 120, 0.55)), url("../../img/landing/grass.jpg") no-repeat;
   background-size: cover;
-  background-position: center 15%;
+  background-position: center center;
   padding: 0 2rem;
   position: relative; }
   .hero__heading, .hero__heading2 {
@@ -223,6 +228,8 @@ body {
       color: #ababab;
       -webkit-appearance: none;
       border-radius: 0;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
       text-indent: 2rem;
       width: 100%; }
       .hero__form__input:nth-child(4) {
@@ -266,11 +273,23 @@ body {
       transition: 0.2s ease-in background; }
       @media (min-width: 680px) {
         .hero__form__submit {
+          height: 80px;
+          position: absolute;
+          right: 0;
+          top: -10px;
           width: 20%;
-          border-radius: 0 10px 10px 0; } }
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); } }
       .hero__form__submit:hover {
         cursor: pointer;
         background: #f96041; }
+    .hero__form--map {
+      top: 0;
+      width: 95%;
+      margin: 0 auto; }
+      @media (min-width: 940px) {
+        .hero__form--map {
+          display: block; } }
 
 .landing {
   position: relative;
@@ -279,7 +298,7 @@ body {
   height: auto;
   width: calc(100% - 4rem); }
   .landing__copy {
-    max-width: 450px;
+    max-width: 500px;
     color: #ababab;
     font-family: "Rubik", sans-serif;
     text-align: center;
@@ -287,6 +306,12 @@ body {
     letter-spacing: 0.25px;
     font-size: 1rem;
     line-height: 1.5rem; }
+    .landing__copy--no-width {
+      max-width: 700px;
+      margin: 2rem auto;
+      text-align: left; }
+      .landing__copy--no-width:last-child {
+        margin-bottom: 4rem; }
   .landing__services {
     margin: 2rem 0;
     padding: 0;
@@ -297,13 +322,18 @@ body {
     flex-wrap: wrap; }
     .landing__services__item {
       margin: 2rem 0;
+      padding: 0 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: calc(50% - 8rem); }
+      width: 100%; }
       @media (min-width: 680px) {
         .landing__services__item {
-          width: auto; } }
+          width: calc(50% - 4rem); } }
+      @media (min-width: 940px) {
+        .landing__services__item {
+          width: auto;
+          flex: 1; } }
       .landing__services__item__icon {
         height: 50px;
         width: 50px;
@@ -312,11 +342,18 @@ body {
         font-family: "Rubik", sans-serif;
         color: #ababab;
         font-size: 0.75rem; }
+        .landing__services__item__copy--italic {
+          font-style: italic;
+          text-align: center; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  color: #ababab; }
 
 .page {
   position: relative; }
   .page__services {
-    background: linear-gradient(rgba(27, 185, 120, 0.85), rgba(27, 185, 120, 0.85)), url("http://owenrauckman.com/greenagain/img/services/bg.jpg") no-repeat;
+    background: linear-gradient(rgba(27, 185, 120, 0.85), rgba(27, 185, 120, 0.85)), url("../../img/services/bg.jpg") no-repeat;
     background-size: cover;
     background-position: center 15%;
     padding: 1rem 2rem; }
@@ -458,6 +495,42 @@ body {
         height: auto;
         border-radius: 10px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); }
+
+.map {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+  .map__mobile-search {
+    background: #fa755a;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    position: absolute;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    bottom: 0rem;
+    right: 1rem;
+    transition: background 0.2s ease-in;
+    display: none; }
+    @media (min-width: 940px) {
+      .map__mobile-search {
+        display: none; } }
+    .map__mobile-search:hover {
+      cursor: pointer;
+      background: #f96041; }
+    .map__mobile-search svg {
+      height: 35px;
+      width: 35px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%); }
+
+#map {
+  height: 100%; }
 
 .footer {
   background: #f3f6fa;

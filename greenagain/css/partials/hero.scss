@@ -1,9 +1,9 @@
 .hero{
   width: calc(100% - 4rem);
   min-height: 300px;
-  background: linear-gradient($transparent-green, $transparent-green), url('http://owenrauckman.com/greenagain/img/landing/hero.jpg') no-repeat;
+  background: linear-gradient(transparentize($transparent-green, 0.3), transparentize($transparent-green, 0.3)), url('../../img/landing/grass.jpg') no-repeat;
   background-size: cover;
-  background-position: center 15%;
+  background-position: center center;
   padding: 0 2rem;
   position: relative;
   &__heading, &__heading2{
@@ -58,6 +58,8 @@
       color: $gray-medium;
       -webkit-appearance: none; //ios override
       border-radius: 0;
+      box-sizing:border-box;
+      -moz-box-sizing:border-box;
       &:nth-child(4){
         border-bottom: none;
       }
@@ -94,15 +96,28 @@
       height: 60px;
       -webkit-appearance: none; //ios override
       // Desktop size
-      width: 100%;;
+      width: 100%;
       transition: 0.2s ease-in background;
       @include breakpoint('phone'){
+        height: 80px;
+        position: absolute;
+        right: 0;
+        top: -10px;
         width: 20%;
-        border-radius: 0 $radius $radius 0;
+        border-radius: $radius;
+        box-shadow: 0 0 15px $shadow;
       }
       &:hover{
         cursor: pointer;
         background: darken($orange, 5%);
+      }
+    }
+    &--map{
+      top: 0;
+      width: 95%;
+      margin: 0 auto;
+      @include breakpoint('desktop'){
+        display: block;
       }
     }
   }
@@ -115,7 +130,7 @@
   height: auto;
   width: calc(100% - 4rem);
   &__copy{
-    max-width: 450px;
+    max-width: 500px;
     color: $gray-medium;
     font-family: $rubik;
     text-align: center;
@@ -123,6 +138,14 @@
     letter-spacing: 0.25px;
     font-size: 1rem;
     line-height: 1.5rem;
+    &--no-width{
+      max-width: 700px;
+      margin: 2rem auto;
+      text-align: left;
+      &:last-child{
+        margin-bottom: 4rem;
+      }
+    }
   }
   &__services{
     margin: 2rem 0;
@@ -134,12 +157,18 @@
     flex-wrap: wrap;
     &__item{
       margin: 2rem 0;
+      padding: 0 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: calc(50% - 8rem);
+      width: 100%;
       @include breakpoint('phone'){
+        width: calc(50% - 4rem);
+
+      }
+      @include breakpoint('desktop'){
         width: auto;
+        flex: 1;
       }
       &__icon{
         height: 50px;
@@ -150,7 +179,17 @@
         font-family: $rubik;
         color: $gray-medium;
         font-size: 0.75rem;
+        &--italic{
+          font-style: italic;
+          text-align: center;
+        }
       }
     }
   }
+}
+
+//global
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    color: $gray-medium;
 }
