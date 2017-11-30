@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swan Song</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="build/main.css">
+</head>
+<body>
+
+  <header class="header container">
+    <div class="header__logo">
+      <img class="header__logo__img" src="./img/logo.jpg" alt="Swan Song"/>
+    </div>
+    <!-- nav -->
+    <nav class="header__nav">
+      <ul class="header__nav__list">
+        <li class="header__nav__list__item"><a href="#">Store</a></li>
+        <li class="header__nav__list__item"><a href="#">Authors</a></li>
+        <li class="header__nav__list__item"><a href="#">Illustrators</a></li>
+        <li class="header__nav__list__item"><a href="#">About</a></li>
+        <li class="header__nav__list__item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- hamburger -->
+    <div class="header__hamburger">
+      <img class="header__hamburger__img" src="./img/hamburger.svg"/>
+    </div>
+  </header>
+
+  <!-- landing -->
+  <main class="landing">
+    <!-- hero -->
+    <section class="landing__hero">
+      <div class="landing__hero__spacer"></div>
+
+      <!-- slideshow -->
+      <div id="js__hero__slideshow">
+        <div class="landing__hero__content container">
+          <div class="landing__hero__content__info">
+            <h1 class="landing__hero__content__info__heading">New Release</h1>
+            <h2 class="landing__hero__content__info__title">Sticks</h2>
+            <h3 class="landing__hero__content__info__author">By C.J. Swan</h3>
+            <p class="landing__hero__content__info__copy">
+              A story of imagination and creativity, Sticks follows the adventures of a boy who uses sticks of all shapes and sizes to become a valiant knight, a fierce Tyrannosaurus rex and anything else he may dream up.
+            </p>
+            <a href="#" class="landing__hero__content__info__cta">Order Now</a>
+          </div>
+          <div class="landing__hero__content__book">
+            <img class="landing__hero__content__book__img" src="./img/landing/sticksCover.png"/>
+          </div>
+        </div>
+
+        <div class="landing__hero__content container">
+          <div class="landing__hero__content__info">
+            <h1 class="landing__hero__content__info__heading">New Release</h1>
+            <h2 class="landing__hero__content__info__title">Sticks 2</h2>
+            <h3 class="landing__hero__content__info__author">By C.J. Swan</h3>
+            <p class="landing__hero__content__info__copy">
+              A story of imagination and creativity, Sticks follows the adventures of a boy who uses sticks of all shapes and sizes to become a valiant knight, a fierce Tyrannosaurus rex and anything else he may dream up.
+            </p>
+            <a href="#" class="landing__hero__content__info__cta">Order Now</a>
+          </div>
+          <div class="landing__hero__content__book">
+            <img class="landing__hero__content__book__img" src="./img/landing/sticksCover.png"/>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- navigation arrows -->
+      <button class="landing__hero__button landing__hero__button--left" id="js__landing__prev">
+        <img class="landing__button__img" src="./img/white-arrow-left.svg"/>
+      </button>
+      <button class="landing__hero__button landing__hero__button--right" id="js__landing__next">
+        <img class="landing__hero__button__img" src="./img/white-arrow-right.svg"/>
+      </button>
+    </section>
+
+    <!-- welcome -->
+    <section class="landing__welcome container">
+      <h2 class="landing__welcome__heading">Welcome</h2>
+      <p class="landing__welcome__copy">
+        Swan Story is a children’s book seller dedicated to celebrating the hearts and imaginations of kids. In a world where technology competes for their attention, Swan Story wants to help keep children young and embrace the spark they bring to this world.
+      </p>
+      <p class="landing__welcome__copy">
+        So, join in with your little ones as they explore the worlds of wonder and fun created by our authors and illustrators.
+      </p>
+      <a class="landing__welcome__cta" href="#">Learn More</a>
+    </section>
+
+    <!-- about -->
+    <section class="landing__about">
+      <div class="landing__about-container container">
+        <div class="landing__about__box">
+          <a href="#">
+            <img class="landing__about__box__img" src="./img/landing/read-with-us.jpg"/>
+            <p class="landing__about__box__copy">Read with us</p>
+          </a>
+        </div>
+        <div class="landing__about__box">
+          <a href="#">
+            <img class="landing__about__box__img" src="./img/landing/meet-our-authors.jpg"/>
+            <p class="landing__about__box__copy">Meet our authors</p>
+          </a>
+        </div>
+        <div class="landing__about__box">
+          <a href="#">
+            <img class="landing__about__box__img" src="./img/landing/get-in-touch.jpg"/>
+            <p class="landing__about__box__copy">Get in touch</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container container">
+        <a class="footer__logo" href="#">
+          <img class="footer__logo__img" src="./img/footer-logo.png"/>
+        </a>
+        <ul class="footer__info">
+          <li class="footer__info__item">Swan Story</li>
+          <li class="footer__info__item">Copyright &copy; 2017</li>
+          <li class="footer__info__item">Site by <a class="footer__info__item__link" href="http://www.ashleykunze.com">Ashley Kunze</a></li>
+        </ul>
+        <a class="footer__social" href="#">
+          <img class="footer__social__img" src="./img/footer-facebook-logo.png"/>
+        </a>
+      </div>
+    </footer>
+  </main>
+
+    <!-- assets -->
+    <script src="build/bundle.js"></script>
+</body>
+</html>
