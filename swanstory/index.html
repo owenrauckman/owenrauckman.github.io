@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Swan Story</title>
+    <link rel="stylesheet" type="text/css" href="./build/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="build/main.css">
 </head>
 <body>
 
   <header class="header container">
     <div class="header__logo">
-      <img class="header__logo__img" src="./img/logo.jpg" alt="Swan Song"/>
+      <img class="header__logo__img" src="img/logo.jpg" alt="Swan Song"/>
     </div>
     <!-- nav -->
     <nav class="header__nav">
@@ -25,7 +25,7 @@
 
     <!-- hamburger -->
     <div class="header__hamburger">
-      <img class="header__hamburger__img" src="./img/hamburger.svg"/>
+      <img class="header__hamburger__img" src="img/hamburger.svg"/>
     </div>
   </header>
 
@@ -48,7 +48,7 @@
             <a href="#" class="landing__hero__content__info__cta">Order Now</a>
           </div>
           <div class="landing__hero__content__book">
-            <img class="landing__hero__content__book__img" src="./img/landing/sticksCover.png"/>
+            <img class="landing__hero__content__book__img" src="img/landing/sticksCover.png"/>
           </div>
         </div>
 
@@ -63,18 +63,22 @@
             <a href="#" class="landing__hero__content__info__cta">Order Now</a>
           </div>
           <div class="landing__hero__content__book">
-            <img class="landing__hero__content__book__img" src="./img/landing/sticksCover.png"/>
+            <img class="landing__hero__content__book__img" src="img/landing/sticksCover.png"/>
           </div>
         </div>
+
       </div>
 
 
+      <!-- scribble -->
+      <div class="landing__hero__scribble"></div>
+
       <!-- navigation arrows -->
       <button class="landing__hero__button landing__hero__button--left" id="js__landing__prev">
-        <img class="landing__button__img" src="./img/white-arrow-left.svg"/>
+        <img class="landing__button__img" src="img/white-arrow-left.svg"/>
       </button>
       <button class="landing__hero__button landing__hero__button--right" id="js__landing__next">
-        <img class="landing__hero__button__img" src="./img/white-arrow-right.svg"/>
+        <img class="landing__hero__button__img" src="img/white-arrow-right.svg"/>
       </button>
     </section>
 
@@ -95,30 +99,31 @@
       <div class="landing__about-container container">
         <div class="landing__about__box">
           <a href="#">
-            <img class="landing__about__box__img" src="./img/landing/read-with-us.jpg"/>
+            <img class="landing__about__box__img" src="img/landing/read-with-us.jpg"/>
             <p class="landing__about__box__copy">Read with us</p>
           </a>
         </div>
         <div class="landing__about__box">
           <a href="#">
-            <img class="landing__about__box__img" src="./img/landing/meet-our-authors.jpg"/>
+            <img class="landing__about__box__img" src="img/landing/meet-our-authors.jpg"/>
             <p class="landing__about__box__copy">Meet our authors</p>
           </a>
         </div>
         <div class="landing__about__box">
           <a href="#">
-            <img class="landing__about__box__img" src="./img/landing/get-in-touch.jpg"/>
+            <img class="landing__about__box__img" src="img/landing/get-in-touch.jpg"/>
             <p class="landing__about__box__copy">Get in touch</p>
           </a>
         </div>
       </div>
     </section>
+    </main>
 
     <!-- footer -->
     <footer class="footer">
       <div class="footer-container container">
         <a class="footer__logo" href="#">
-          <img class="footer__logo__img" src="./img/footer-logo.png"/>
+          <img class="footer__logo__img" src="img/footer-logo.png"/>
         </a>
         <ul class="footer__info">
           <li class="footer__info__item">Swan Story</li>
@@ -126,13 +131,24 @@
           <li class="footer__info__item">Site by <a class="footer__info__item__link" href="http://www.ashleykunze.com">Ashley Kunze</a></li>
         </ul>
         <a class="footer__social" href="#">
-          <img class="footer__social__img" src="./img/footer-facebook-logo.png"/>
+          <img class="footer__social__img" src="img/footer-facebook-logo.png"/>
         </a>
       </div>
     </footer>
-  </main>
 
     <!-- assets -->
     <script src="build/bundle.js"></script>
+
+    <!-- typekit -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'sce3jvl',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
 </body>
 </html>

@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "68c6a43b4199ac8da700"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "445b90b4c2c23ce750df"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -10572,6 +10572,8 @@ var Landing = function () {
     _classCallCheck(this, Landing);
 
     this.config = {
+      heroContent: '.landing__hero__content',
+      heroButton: '.landing__hero__button',
       firstChildImage: '.landing__hero__content:first-child .landing__hero__content__book__img',
       heroContentFirstChild: '.landing__hero__content:first-child',
       heroContentLastChild: '.landing__hero__content:last-child',
@@ -10611,6 +10613,11 @@ var Landing = function () {
     key: 'initialPageAnimation',
     value: function initialPageAnimation() {
       (0, _jquery2.default)(this.config.firstChildImage).animate({ top: '0' }, 100);
+
+      // if only one book exists, hide the arrows
+      if ((0, _jquery2.default)(this.config.heroContent).length === 1) {
+        (0, _jquery2.default)(this.config.heroButton).hide();
+      }
     }
   }]);
 

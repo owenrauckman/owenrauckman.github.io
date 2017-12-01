@@ -1,4 +1,8 @@
 /*! v1.0.0 */
+@import url(https://use.typekit.net/sce3jvl.css);@font-face {
+  font-family: 'Swan Story Regular';
+  src: url('./fonts/SwanStory-Regular.ttf'); }
+
 * {
   padding: 0;
   margin: 0; }
@@ -9,7 +13,10 @@ html, body {
 
 body {
   position: relative;
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: "adelle-sans", sans-serif;
+  font-weight: lighter;
+  color: #030404; }
 
 ul {
   padding: 0; }
@@ -36,7 +43,8 @@ ul {
       display: flex; }
       .header__nav__list__item {
         list-style: none;
-        font-family: sans-serif;
+        font-family: "cronos-pro", sans-serif;
+        font-size: 1.25rem;
         margin: 0 1rem; }
         .header__nav__list__item a:link, .header__nav__list__item a:visited, .header__nav__list__item a:active, .header__nav__list__item a:hover {
           text-decoration: none;
@@ -51,9 +59,17 @@ ul {
       width: 40px; }
 
 .landing__hero {
-  background: #0090D6;
+  background: #198fcf;
   overflow: hidden;
   position: relative; }
+  .landing__hero__scribble {
+    position: absolute;
+    width: 100%;
+    height: 137px;
+    content: '';
+    z-index: +1;
+    bottom: 0;
+    background: url("./img/scribble-transparent.png"); }
   .landing__hero__spacer {
     background: white;
     height: 2rem;
@@ -69,6 +85,7 @@ ul {
     flex-wrap: wrap-reverse;
     display: none;
     opacity: 0;
+    padding: 0 2rem 6rem 2rem;
     transition: opacity 0.25s ease-in-out; }
     .landing__hero__content:first-of-type {
       display: flex;
@@ -88,9 +105,9 @@ ul {
           padding-left: 4rem;
           text-align: left; } }
       .landing__hero__content__info__heading {
-        font-family: sans-serif;
+        font-family: "Swan Story Regular", sans-serif;
         text-transform: uppercase;
-        font-size: 1rem;
+        font-size: 1.25rem;
         letter-spacing: 0.1rem;
         margin: 1rem 0;
         font-weight: lighter; }
@@ -98,23 +115,23 @@ ul {
           .landing__hero__content__info__heading {
             margin: 5rem 0 1rem 0; } }
       .landing__hero__content__info__title {
-        font-family: sans-serif;
-        font-size: 2rem;
+        font-family: "cronos-pro", sans-serif;
+        font-weight: lighter;
+        font-size: 3rem;
         margin: 1rem 0; }
       .landing__hero__content__info__author {
-        font-family: sans-serif;
         font-size: 1rem;
         margin: 1rem 0;
+        font-style: italic;
         font-weight: lighter; }
       .landing__hero__content__info__copy {
-        font-family: sans-serif;
-        font-size: 1rem;
-        font-weight: lighter; }
+        font-weight: lighter;
+        font-size: 1rem; }
       .landing__hero__content__info__cta {
         margin: 2rem 0 4rem 0;
         display: inline-block;
-        font-family: sans-serif;
         font-weight: lighter;
+        text-transform: uppercase;
         transition: all 0.25s ease-in-out; }
         .landing__hero__content__info__cta:link, .landing__hero__content__info__cta:active, .landing__hero__content__info__cta:visited, .landing__hero__content__info__cta:hover {
           color: white;
@@ -123,7 +140,7 @@ ul {
           padding: 0.5rem 1rem; }
         .landing__hero__content__info__cta:hover {
           background: white;
-          color: #0090D6; }
+          color: #198fcf; }
     .landing__hero__content__book {
       flex: 1 0 calc(60% - 2rem);
       position: relative; }
@@ -170,26 +187,29 @@ ul {
       right: 0; }
 
 .landing__welcome {
-  padding: 4rem;
+  padding: 6rem 2rem;
   text-align: center; }
   .landing__welcome__heading {
-    font-family: sans-serif;
-    font-weight: lighter; }
+    font-family: "Swan Story Regular", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: #293266; }
   .landing__welcome__copy {
-    font-family: sans-serif;
     font-weight: lighter;
     max-width: 600px;
     margin: 2rem auto;
     line-height: 1.5rem; }
   .landing__welcome__cta {
-    font-family: sans-serif;
+    display: block;
+    margin-top: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     position: relative;
     font-weight: lighter; }
     .landing__welcome__cta:link, .landing__welcome__cta:hover, .landing__welcome__cta:active, .landing__welcome__cta:visited {
       text-decoration: none;
-      color: #16306B; }
+      color: #293266; }
     .landing__welcome__cta:hover:after {
       transform: translateX(1.5rem); }
     .landing__welcome__cta:after {
@@ -198,6 +218,7 @@ ul {
       content: '';
       height: 21px;
       width: 7px;
+      top: 6px;
       transform: translateX(1rem);
       background: no-repeat url('data:image/svg+xml;utf8,<svg viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><g transform="scale(.01446 .02168)"><clipPath id="a"><path d="M0 0h623v787H0z"/></clipPath><g clip-path="url(#a)"><path d="M472.394 391.538L.064 53.48 74.662-.02 621.588 391.54l-74.597 53.5L74.66 783.095l-74.595-53.5 472.33-338.058z" fill="#16306C"/></g></g></svg>'); }
 
@@ -225,12 +246,11 @@ ul {
       width: 100%;
       vertical-align: bottom; }
     .landing__about__box__copy {
-      background: #16306B;
+      background: #293266;
+      font-family: "cronos-pro", sans-serif;
       color: white;
       padding: 1rem 2rem 1rem 1rem;
-      font-family: sans-serif;
       font-size: 1.25rem;
-      font-weight: lighter;
       position: relative; }
       .landing__about__box__copy:hover:after {
         transform: translateX(0.5rem); }
@@ -241,10 +261,316 @@ ul {
         height: 23px;
         width: 9px;
         right: 2rem;
-        margin-top: 2px;
+        margin-top: 5px;
         background: no-repeat url('data:image/svg+xml;utf8,<svg viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><g transform="scale(.01446 .02168)"><clipPath id="a"><path d="M0 0h623v787H0z"/></clipPath><g clip-path="url(#a)"><path d="M472.394 391.538L.064 53.48 74.662-.02 621.588 391.54l-74.597 53.5L74.66 783.095l-74.595-53.5 472.33-338.058z" fill="#FFFFFF"/></g></g></svg>'); }
     .landing__about__box a:link, .landing__about__box a:active, .landing__about__box a:visited, .landing__about__box a:hover {
       text-decoration: none; }
+
+.authors {
+  background: #293266; }
+  .authors-container {
+    padding: 3rem 0rem 0rem 0rem;
+    max-width: 1024px;
+    margin: 0 auto; }
+    @media (min-width: 680px) {
+      .authors-container {
+        padding: 6rem 2rem; } }
+  .authors__heading {
+    font-family: "Swan Story Regular", sans-serif;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    padding: 0 2rem; }
+    @media (min-width: 680px) {
+      .authors__heading {
+        padding: 0; } }
+  .authors__box {
+    display: flex;
+    width: 100%;
+    margin: 3rem 0;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    @media (min-width: 768px) {
+      .authors__box {
+        flex-direction: row; } }
+    .authors__box__info {
+      background: #4CC2BD;
+      max-width: calc(100% - 4rem);
+      padding: 2rem; }
+      @media (min-width: 768px) {
+        .authors__box__info {
+          max-width: calc(34% - 4rem); } }
+      .authors__box__info__img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 2rem;
+        margin: 0 auto 2rem auto; }
+        @media (min-width: 680px) {
+          .authors__box__info__img {
+            margin: auto auto 2rem auto; } }
+      .authors__box__info__link {
+        display: block;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        overflow-wrap: break-word; }
+        .authors__box__info__link:link, .authors__box__info__link:active, .authors__box__info__link:visited, .authors__box__info__link:hover {
+          color: #030404;
+          font-weight: bold;
+          text-decoration: none; }
+        .authors__box__info__link:hover {
+          text-decoration: underline; }
+      .authors__box__info__instagram {
+        outline: none;
+        display: block;
+        text-align: center;
+        margin: 1rem auto; }
+    .authors__box__bio {
+      padding: 4rem;
+      background: white;
+      max-width: calc(100% - 8rem); }
+      @media (min-width: 768px) {
+        .authors__box__bio {
+          max-width: calc(66% - 8rem); } }
+      .authors__box__bio__heading {
+        font-size: 2rem;
+        font-family: "cronos-pro", sans-serif;
+        margin-bottom: 0.5rem; }
+      .authors__box__bio__description {
+        font-weight: lighter;
+        font-style: italic;
+        font-size: 1rem;
+        margin-bottom: 1rem; }
+      .authors__box__bio p {
+        margin: 1rem 0;
+        font-size: 0.9rem;
+        line-height: 1.5rem; }
+      .authors__box__bio a:link, .authors__box__bio a:visited, .authors__box__bio a:hover, .authors__box__bio a:active {
+        color: #030404; }
+
+.store {
+  background: white; }
+  .store-container {
+    padding: 3rem 0rem 0rem 0rem;
+    max-width: 1024px;
+    margin: 0 auto; }
+    @media (min-width: 680px) {
+      .store-container {
+        padding: 6rem 2rem; } }
+  .store__heading {
+    font-family: "Swan Story Regular", sans-serif;
+    color: #293266;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    padding: 0 2rem; }
+    @media (min-width: 680px) {
+      .store__heading {
+        padding: 0; } }
+  .store__products {
+    display: flex;
+    flex-wrap: wrap; }
+    .store__products__item {
+      transform: scale(1);
+      transition: transform 0.25s ease-in-out;
+      padding: 1rem;
+      margin: 1rem;
+      flex: 1 0 calc(100% - 4rem);
+      max-width: calc(100% - 4rem); }
+      .store__products__item:link, .store__products__item:visited, .store__products__item:active, .store__products__item:hover {
+        outline: none;
+        color: #030404;
+        text-decoration: none; }
+      .store__products__item:hover {
+        transform: scale(0.95); }
+      @media (min-width: 680px) {
+        .store__products__item {
+          flex: 1 0 calc(50% - 4rem);
+          max-width: calc(50% - 4rem); } }
+      @media (min-width: 768px) {
+        .store__products__item {
+          flex: 1 0 calc(33.3% - 4rem);
+          max-width: calc(33.3% - 4rem); } }
+      @media (min-width: 1024px) {
+        .store__products__item {
+          flex: 1 0 calc(25% - 4rem);
+          max-width: calc(25% - 4rem); } }
+      .store__products__item__box {
+        border: solid 1px #293266;
+        padding: 1rem; }
+        .store__products__item__box__img {
+          display: block;
+          max-width: 100%;
+          height: auto; }
+      .store__products__item__title {
+        color: #198fcf;
+        font-family: "cronos-pro", sans-serif;
+        margin: 1rem 0 0.25rem 0; }
+      .store__products__item__author {
+        font-weight: normal;
+        font-size: 0.9rem;
+        font-style: italic;
+        margin-bottom: 0.25rem; }
+      .store__products__item__copy {
+        font-size: 0.9rem; }
+
+.about {
+  background: #198fcf; }
+  .about-container {
+    padding: 3rem 0rem 0rem 0rem;
+    max-width: 1024px;
+    margin: 0 auto; }
+    @media (min-width: 680px) {
+      .about-container {
+        padding: 6rem 2rem; } }
+  .about__heading {
+    font-family: "Swan Story Regular", sans-serif;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    padding: 0 2rem; }
+    @media (min-width: 680px) {
+      .about__heading {
+        padding: 0; } }
+  .about__box {
+    margin: 3rem 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem;
+    width: calc(100% - 4rem); }
+    @media (min-width: 1024px) {
+      .about__box {
+        padding: 4rem;
+        width: calc(100% - 8rem);
+        flex-direction: row; } }
+    .about__box__copy {
+      margin-right: 2rem;
+      flex: 1 0 calc(60% - 2rem); }
+      .about__box__copy h1, .about__box__copy h2, .about__box__copy h3 {
+        font-family: "cronos-pro", sans-serif;
+        color: #293266;
+        margin-bottom: 0.5rem; }
+      .about__box__copy p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.5rem; }
+    .about__box__image {
+      flex: 1 0 40%;
+      margin: 2rem auto 0 auto; }
+      .about__box__image__img {
+        max-width: 100%;
+        height: auto; }
+
+.contact {
+  background: #40ba8d; }
+  .contact-container {
+    padding: 3rem 0rem 0rem 0rem;
+    max-width: 1024px;
+    margin: 0 auto; }
+    @media (min-width: 680px) {
+      .contact-container {
+        padding: 6rem 2rem; } }
+  .contact__heading {
+    font-family: "Swan Story Regular", sans-serif;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    padding: 0 2rem; }
+    @media (min-width: 680px) {
+      .contact__heading {
+        padding: 0; } }
+  .contact__box {
+    margin: 3rem 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem;
+    width: calc(100% - 4rem); }
+    @media (min-width: 1024px) {
+      .contact__box {
+        padding: 4rem;
+        width: calc(100% - 8rem);
+        flex-direction: row; } }
+    .contact__box h1, .contact__box h2, .contact__box h3 {
+      font-family: "cronos-pro", sans-serif;
+      color: #293266;
+      margin-bottom: 0.5rem; }
+    .contact__box p {
+      margin: 0.5rem 0; }
+    .contact__box__form {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column; }
+      .contact__box__form-container {
+        display: block;
+        width: 100%; }
+      .contact__box__form__input {
+        display: block;
+        max-width: 100%;
+        height: 40px;
+        text-indent: 1rem;
+        margin: 1rem 0;
+        outline: none; }
+        @media (min-width: 680px) {
+          .contact__box__form__input {
+            max-width: 300px; } }
+      .contact__box__form__label {
+        font-family: "adelle-sans", sans-serif; }
+      .contact__box__form__select {
+        display: block;
+        max-width: 100%;
+        margin: 1rem 0;
+        background: transparent;
+        padding: 15px;
+        border-radius: 0px;
+        -webkit-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;
+        background: no-repeat right url('data:image/svg+xml;utf8,<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path fill="none" d="M0 0h17.085v17.085H0z"/><path d="M9 10.546l4.85-4.52.77.713L9 11.973l-.767-.714-4.85-4.52.766-.715L9 10.545z" fill="#9B9B9B" serif:id="arrow left"/></svg>');
+        color: black;
+        border: none;
+        outline: none;
+        display: inline-block;
+        -webkit-appearance: none;
+        cursor: pointer;
+        border: solid 1px #E9EFF1; }
+        @media (min-width: 680px) {
+          .contact__box__form__select {
+            max-width: 300px; } }
+      .contact__box__form__textarea {
+        display: block;
+        max-width: 100%;
+        padding: 1rem;
+        margin: 1rem 0;
+        outline: none;
+        min-height: 150px; }
+        @media (min-width: 680px) {
+          .contact__box__form__textarea {
+            max-width: 500px; } }
+      .contact__box__form__button {
+        max-width: 100%;
+        align-self: initial;
+        background: #6e7070;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-family: "adelle-sans", sans-serif;
+        padding: 0.5rem 1rem;
+        outline: none;
+        border: none; }
+        @media (min-width: 680px) {
+          .contact__box__form__button {
+            align-self: flex-start; } }
+  .contact__newsletter {
+    background: #293266;
+    padding: 4rem; }
+    .contact__newsletter__heading {
+      text-align: center;
+      color: white; }
 
 .footer {
   background: #E9EFF1; }
