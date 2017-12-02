@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "445b90b4c2c23ce750df"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5b5cd87dbdb0bcb4d4fb"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -707,7 +707,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(4)(__webpack_require__.s = 4);
+/******/ 	return hotCreateRequire(5)(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10544,10 +10544,73 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	return jQuery;
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Landing = function () {
+  function Landing() {
+    _classCallCheck(this, Landing);
+
+    this.config = {
+      bookButton: '.book__product__nav',
+      bookFirstChild: '.book__product__images__img:first-child',
+      bookLastChild: '.book__product__images__img:last-child',
+      slideshow: '#js__book__slideshow',
+      books: '.book__product__images__img'
+    };
+  }
+
+  _createClass(Landing, [{
+    key: 'getNextSlide',
+    value: function getNextSlide() {
+      (0, _jquery2.default)(this.config.bookFirstChild).hide().css({ opacity: 0 }).next().css({ display: 'flex' }).animate({
+        opacity: 1
+      }).end().appendTo(this.config.slideshow);
+    }
+  }, {
+    key: 'getPrevSlide',
+    value: function getPrevSlide() {
+      (0, _jquery2.default)(this.config.bookFirstChild).hide().css({ opacity: 0 });
+      (0, _jquery2.default)(this.config.bookLastChild).prependTo(this.config.slideshow).hide();
+      (0, _jquery2.default)(this.config.bookFirstChild).css({ display: 'flex' }).animate({ opacity: 1 }, 200);
+    }
+  }, {
+    key: 'initialPageAnimation',
+    value: function initialPageAnimation() {
+      // if only one book exists, hide the arrows
+      if ((0, _jquery2.default)(this.config.books).length === 1) {
+        (0, _jquery2.default)(this.config.bookButton).hide();
+      }
+    }
+  }]);
+
+  return Landing;
+}();
+
+exports.default = Landing;
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10627,13 +10690,13 @@ var Landing = function () {
 exports.default = Landing;
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10663,34 +10726,49 @@ module.exports = function (module) {
 };
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(2);
+__webpack_require__(3);
 
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _Landing = __webpack_require__(1);
+var _Landing = __webpack_require__(2);
 
 var _Landing2 = _interopRequireDefault(_Landing);
+
+var _Book = __webpack_require__(1);
+
+var _Book2 = _interopRequireDefault(_Book);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var landing = new _Landing2.default();
+var book = new _Book2.default();
 
 (0, _jquery2.default)(document).ready(function () {
   landing.initialPageAnimation();
+  book.initialPageAnimation();
 
+  // --- landing page buttons ---
   (0, _jquery2.default)('#js__landing__next').click(function () {
     landing.getNextSlide();
   });
   (0, _jquery2.default)('#js__landing__prev').click(function () {
     landing.getPrevSlide();
+  });
+
+  // --- product page buttons ---
+  (0, _jquery2.default)('#js__book__next').click(function () {
+    book.getNextSlide();
+  });
+  (0, _jquery2.default)('#js__book__prev').click(function () {
+    book.getPrevSlide();
   });
 });
 

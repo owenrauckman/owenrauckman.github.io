@@ -1,7 +1,8 @@
 /*! v1.0.0 */
-@import url(https://use.typekit.net/sce3jvl.css);@font-face {
+@import url(https://use.typekit.net/sce3jvl.css);@charset "UTF-8";
+@font-face {
   font-family: 'Swan Story Regular';
-  src: url('./fonts/SwanStory-Regular.ttf'); }
+  src: url(/fonts/SwanStory-Regular.ttf); }
 
 * {
   padding: 0;
@@ -31,9 +32,11 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem; }
-  .header__logo__img {
-    width: 140px;
-    height: auto; }
+  .header__logo {
+    outline: none; }
+    .header__logo__img {
+      width: 140px;
+      height: auto; }
   .header__nav {
     display: none; }
     @media (min-width: 768px) {
@@ -69,7 +72,7 @@ ul {
     content: '';
     z-index: +1;
     bottom: 0;
-    background: url("./img/scribble-transparent.png"); }
+    background: url("/img/scribble-transparent.png"); }
   .landing__hero__spacer {
     background: white;
     height: 2rem;
@@ -521,16 +524,26 @@ ul {
           .contact__box__form__input {
             max-width: 300px; } }
       .contact__box__form__label {
-        font-family: "adelle-sans", sans-serif; }
+        font-family: "adelle-sans", sans-serif;
+        flex: 1; }
+      .contact__box__form__select-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%; }
+        @media (min-width: 680px) {
+          .contact__box__form__select-container {
+            max-width: 300px; } }
       .contact__box__form__select {
         display: block;
         max-width: 100%;
         margin: 1rem 0;
+        flex: 1;
         background: transparent;
         padding: 15px;
         border-radius: 0px;
         -webkit-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;
-        background: no-repeat right url('data:image/svg+xml;utf8,<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path fill="none" d="M0 0h17.085v17.085H0z"/><path d="M9 10.546l4.85-4.52.77.713L9 11.973l-.767-.714-4.85-4.52.766-.715L9 10.545z" fill="#9B9B9B" serif:id="arrow left"/></svg>');
+        background: no-repeat right url('data:image/svg+xml;utf8,<svg viewBox="0 -5 26 26" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path fill="none" d="M0 0h17.085v17.085H0z"/><path d="M9 10.546l4.85-4.52.77.713L9 11.973l-.767-.714-4.85-4.52.766-.715L9 10.545z" fill="#9B9B9B" serif:id="arrow left"/></svg>');
         color: black;
         border: none;
         outline: none;
@@ -561,7 +574,8 @@ ul {
         font-family: "adelle-sans", sans-serif;
         padding: 0.5rem 1rem;
         outline: none;
-        border: none; }
+        border: none;
+        border-radius: 0px; }
         @media (min-width: 680px) {
           .contact__box__form__button {
             align-self: flex-start; } }
@@ -571,6 +585,255 @@ ul {
     .contact__newsletter__heading {
       text-align: center;
       color: white; }
+
+.book {
+  background: #E9EFF1; }
+  .book-container {
+    padding: 3rem 0rem 2rem 0rem;
+    max-width: 1024px;
+    margin: 0 auto; }
+    @media (min-width: 680px) {
+      .book-container {
+        padding: 3rem 2rem; } }
+  .book__breadcrumbs {
+    display: flex;
+    padding: 0 2rem; }
+    @media (min-width: 680px) {
+      .book__breadcrumbs {
+        padding: 0; } }
+    .book__breadcrumbs p {
+      margin: 0 0.25rem; }
+    .book__breadcrumbs a {
+      margin: 0 0.25rem; }
+      .book__breadcrumbs a:link, .book__breadcrumbs a:hover, .book__breadcrumbs a:active, .book__breadcrumbs a:visited {
+        color: #030404;
+        text-decoration: none; }
+      .book__breadcrumbs a:hover {
+        color: #198fcf; }
+  .book__product {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 2rem; }
+    @media (min-width: 680px) {
+      .book__product {
+        padding: 2rem 0;
+        flex-wrap: nowrap;
+        flex-direction: row; } }
+    .book__product__images {
+      flex: 1 0 100%;
+      position: relative; }
+      @media (min-width: 680px) {
+        .book__product__images {
+          flex: 1 0 calc(40%); } }
+      .book__product__images__box {
+        padding: 0 1.5rem;
+        position: relative; }
+      .book__product__images__img {
+        max-width: 100%;
+        margin: 0 auto;
+        display: none; }
+        .book__product__images__img:first-of-type {
+          display: flex;
+          opacity: 1; }
+    .book__product__nav {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      top: 50%;
+      transform: scale(1);
+      transition: transform 0.25s ease-in-out; }
+      .book__product__nav:hover {
+        cursor: pointer;
+        transform: scale(1.2); }
+      .book__product__nav--left {
+        left: 0; }
+      .book__product__nav--right {
+        right: 0; }
+    .book__product__info {
+      flex: 1 0 100%;
+      padding: 2rem 0; }
+      @media (min-width: 680px) {
+        .book__product__info {
+          padding: 0 0 0 2rem;
+          flex: 1 0 calc(60% - 2rem); } }
+      .book__product__info__title {
+        font-family: "cronos-pro", sans-serif;
+        font-size: 2.5rem;
+        font-weight: lighter; }
+      .book__product__info__contributors {
+        font-weight: lighter;
+        font-size: 1rem; }
+        .book__product__info__contributors--author {
+          display: block; }
+          @media (min-width: 1024px) {
+            .book__product__info__contributors--author {
+              display: inline; } }
+        .book__product__info__contributors--illustrator {
+          display: block; }
+          @media (min-width: 1024px) {
+            .book__product__info__contributors--illustrator {
+              display: inline;
+              position: relative;
+              margin-left: 1.5rem; }
+              .book__product__info__contributors--illustrator:before {
+                position: absolute;
+                content: ' \2022   ';
+                margin-left: -1rem; } }
+      .book__product__info__description {
+        margin: 1rem 0;
+        max-width: 500px; }
+      .book__product__info__price {
+        font-family: "cronos-pro", sans-serif;
+        font-size: 2.5rem;
+        font-weight: lighter;
+        margin: 1rem 0; }
+      .book__product__info__form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column; }
+        .book__product__info__form__input {
+          display: inline-block;
+          max-width: 100%;
+          height: 40px;
+          text-indent: 1rem;
+          margin: 0.5rem 0;
+          outline: none;
+          border: solid 1px #9A9A9A;
+          background: transparent;
+          width: 100%; }
+          @media (min-width: 680px) {
+            .book__product__info__form__input {
+              width: 50px; } }
+        .book__product__info__form__label {
+          font-family: "adelle-sans", sans-serif;
+          margin-right: 0.5rem;
+          min-width: 50px;
+          align-self: center; }
+        .book__product__info__form__select-container {
+          display: flex;
+          max-width: 100%; }
+        .book__product__info__form__select {
+          display: block;
+          min-width: 200px;
+          margin: 0.5rem 0;
+          width: 100%;
+          background: transparent;
+          padding: 15px;
+          border-radius: 0px;
+          -webkit-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;
+          background: no-repeat right url('data:image/svg+xml;utf8,<svg viewBox="0 -5 26 26" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path fill="none" d="M0 0h17.085v17.085H0z"/><path d="M9 10.546l4.85-4.52.77.713L9 11.973l-.767-.714-4.85-4.52.766-.715L9 10.545z" fill="#9B9B9B" serif:id="arrow left"/></svg>');
+          color: black;
+          border: none;
+          outline: none;
+          display: inline-block;
+          -webkit-appearance: none;
+          cursor: pointer;
+          border: solid 1px #9A9A9A; }
+          @media (min-width: 680px) {
+            .book__product__info__form__select {
+              max-width: 300px; } }
+        .book__product__info__form__button {
+          margin: 2rem 0;
+          max-width: 100%;
+          align-self: initial;
+          background: #9A9A9A;
+          color: white;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+          font-family: "adelle-sans", sans-serif;
+          padding: 1rem 1rem;
+          outline: none;
+          border: none;
+          border-radius: 0px;
+          transition: background 0.25s ease-in-out; }
+          @media (min-width: 680px) {
+            .book__product__info__form__button {
+              align-self: flex-start; } }
+          .book__product__info__form__button:hover {
+            cursor: pointer;
+            background: #818181; }
+      .book__product__info__contact a:link, .book__product__info__contact a:visited, .book__product__info__contact a:hover, .book__product__info__contact a:visited {
+        color: #030404; }
+  .book__contributors {
+    background: #4CC2BD; }
+    .book__contributors-container {
+      padding: 2rem;
+      max-width: 1024px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column; }
+      @media (min-width: 768px) {
+        .book__contributors-container {
+          flex-direction: row; } }
+    .book__contributors__box {
+      margin: 2rem 0;
+      flex: 1 0 calc(50% - 4rem); }
+      @media (min-width: 768px) {
+        .book__contributors__box {
+          margin: 2rem; } }
+      .book__contributors__box__heading {
+        background: #40ba8d;
+        padding: 1rem;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1rem;
+        font-weight: lighter;
+        font-family: "Swan Story Regular", sans-serif; }
+      .book__contributors__box__info {
+        padding: 1rem;
+        background: white; }
+      .book__contributors__box__name {
+        font-family: "cronos-pro", sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem; }
+      .book__contributors__box__copy {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        margin: 1rem 0; }
+      .book__contributors__box__cta {
+        display: block;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        position: relative;
+        font-weight: lighter; }
+        .book__contributors__box__cta:link, .book__contributors__box__cta:hover, .book__contributors__box__cta:active, .book__contributors__box__cta:visited {
+          text-decoration: none;
+          color: #555656; }
+        .book__contributors__box__cta:hover:after {
+          transform: translateX(1.5rem); }
+        .book__contributors__box__cta:after {
+          transition: transform 0.25s ease-in-out;
+          position: absolute;
+          content: '';
+          height: 21px;
+          width: 7px;
+          top: 6px;
+          transform: translateX(1rem);
+          background: no-repeat url('data:image/svg+xml;utf8,<svg viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><g transform="scale(.01446 .02168)"><clipPath id="a"><path d="M0 0h623v787H0z"/></clipPath><g clip-path="url(#a)"><path d="M472.394 391.538L.064 53.48 74.662-.02 621.588 391.54l-74.597 53.5L74.66 783.095l-74.595-53.5 472.33-338.058z" fill="#555656"/></g></g></svg>'); }
+  .book__share {
+    background: #293266; }
+    .book__share p {
+      color: white;
+      text-align: center;
+      font-size: 1.1rem;
+      letter-spacing: 0.05rem; }
+    .book__share-container {
+      padding: 4rem 2rem;
+      max-width: 1024px;
+      margin: 0 auto; }
+    .book__share__social {
+      display: flex;
+      list-style: none;
+      justify-content: center; }
+      .book__share__social__item {
+        margin: 1rem; }
+        .book__share__social__item a {
+          outline: none; }
+          .book__share__social__item a img {
+            width: 40px;
+            height: 40px; }
 
 .footer {
   background: #E9EFF1; }
