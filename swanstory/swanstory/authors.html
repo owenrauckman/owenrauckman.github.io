@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swan Story</title>
+    <link rel="stylesheet" type="text/css" href="./build/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header class="header container">
+    <div class="header__logo">
+      <img class="header__logo__img" src="img/logo.jpg" alt="Swan Song"/>
+    </div>
+    <!-- nav -->
+    <nav class="header__nav">
+      <ul class="header__nav__list">
+        <li class="header__nav__list__item"><a href="#">Store</a></li>
+        <li class="header__nav__list__item"><a href="#">Authors</a></li>
+        <li class="header__nav__list__item"><a href="#">Illustrators</a></li>
+        <li class="header__nav__list__item"><a href="#">About</a></li>
+        <li class="header__nav__list__item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- hamburger -->
+    <div class="header__hamburger">
+      <img class="header__hamburger__img" src="img/hamburger.svg"/>
+    </div>
+  </header>
+
+  <!-- authors -->
+  <main class="authors">
+    <section class="authors-container">
+      <h1 class="authors__heading">Authors</h1>
+
+      <div class="authors__box">
+        <div class="authors__box__info">
+          <img class="authors__box__info__img" src="img/authors/cj.jpg"/>
+          <a class="authors__box__info__link" href="mailto:name@example.com">dlzimmerman@zoho.com</a>
+          <a class="authors__box__info__link" href="http://www.dlzimmerman.com">http://www.dlzimmerman.com</a>
+          <a class="authors__box__info__instagram" href="http://instagram.com">
+            <img class="authors__box__info__icon"src="img/instagram.png"/>
+          </a>
+        </div>
+        <div class="authors__box__bio">
+          <h2 class="authors__box__bio__heading">C.J. Swan</h2>
+          <h3 class="authors__box__bio__description">Author of "Sticks" and founder of Swan Story</h3>
+          <p>Almost every day when my son was a toddler, he would gather a stack of books, and we would sit on the floor together and read every single one. My love for children’s books and stories began with this daily ritual. That love grew when my son, at age 3, entered day school, and I entered with him as a volunteer. Soon after, volunteering turned into a teaching position. I then returned to Texas Woman’s University to earn a Bachelor of Science degree in elementary education with an early childhood development endorsement.</p>
+          <p>How children learn, what motivates them, inspires them and makes each of them unique — that’s what ignited my desire to know everything I could about children, their development and their potential.</p>
+          <p>Over the years, I have learned so much from my students and have loved telling them stories — often adlibbed in an inspired moment. My students told me stories too, and now I want to share some of our stories with a new generation of children. I hope you enjoy them as much as we did!</p>
+          <p>Check out C.J.’s first book Sticks in our store!</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container container">
+        <a class="footer__logo" href="#">
+          <img class="footer__logo__img" src="img/footer-logo.png"/>
+        </a>
+        <ul class="footer__info">
+          <li class="footer__info__item">Swan Story</li>
+          <li class="footer__info__item">Copyright &copy; 2017</li>
+          <li class="footer__info__item">Site by <a class="footer__info__item__link" href="http://www.ashleykunze.com">Ashley Kunze</a></li>
+        </ul>
+        <a class="footer__social" href="#">
+          <img class="footer__social__img" src="img/footer-facebook-logo.png"/>
+        </a>
+      </div>
+    </footer>
+
+    <!-- assets -->
+    <script src="build/bundle.js"></script>
+
+    <!-- typekit -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'sce3jvl',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+</body>
+</html>

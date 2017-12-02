@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swan Story</title>
+    <link rel="stylesheet" type="text/css" href="./build/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header class="header container">
+    <div class="header__logo">
+      <a href="/">
+        <img class="header__logo__img" src="img/logo.jpg" alt="Swan Song"/>
+      </a>
+    </div>
+    <!-- nav -->
+    <nav class="header__nav">
+      <ul class="header__nav__list">
+        <li class="header__nav__list__item"><a href="#">Store</a></li>
+        <li class="header__nav__list__item"><a href="#">Authors</a></li>
+        <li class="header__nav__list__item"><a href="#">Illustrators</a></li>
+        <li class="header__nav__list__item"><a href="#">About</a></li>
+        <li class="header__nav__list__item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- hamburger -->
+    <div class="header__hamburger">
+      <img class="header__hamburger__img" src="img/hamburger.svg"/>
+    </div>
+  </header>
+
+  <!-- contact -->
+  <main class="book">
+    <section class="book-container">
+      <div class="book__breadcrumbs">
+        <a href="/store.html">Store</a>
+        <p>></p>
+        <p>Sticks</p>
+      </div>
+      <div class="book__product">
+        <div class="book__product__images">
+          <div class="book__product__images__box">
+            <div id="js__book__slideshow">
+              <img class="book__product__images__img" src="img/books/sticks-preview-1.png"/>
+              <img class="book__product__images__img" src="img/books/sticks-preview-2.png"/>
+            </div>
+
+            <div class="book__product__nav book__product__nav--left" id="js__book__prev">
+              <img class="" src="img/book-arrow-left.svg"/>
+            </div>
+            <div class="book__product__nav book__product__nav--right" id="js__book__next">
+              <img class="" src="img/book-arrow-right.svg"/>
+            </div>
+
+          </div>
+        </div>
+        <div class="book__product__info">
+          <h1 class="book__product__info__title">Sticks</h1>
+          <h2 class="book__product__info__contributors">
+            <span class="book__product__info__contributors--author">By CJ Swan</span>
+            <span class="book__product__info__contributors--illustrator">Illustrated by Dana Zimmerman</span>
+          </h2>
+          <p class="book__product__info__description">
+            C.J. Swan tells the story of an imaginative boy with a love for sticks and all they can do. In his hands, sticks become mighty swords and razor-sharp talons. Take your children along on these adventures, and watch as their eyes light up imagining all they can create with just a few sticks.
+          </p>
+          <!-- todo js to display default and toggle -->
+          <h3 class="book__product__info__price book__product__info__price--hardback">$17.99</h3>
+          <!-- <h3 class="book__product__info__price book__product__info__price--paperback">$7.99</h3> -->
+
+          <form class="book__product__info__form">
+            <div class="book__product__info__form__select-container">
+              <label class="book__product__info__form__label" for="cover">Cover:</label>
+              <select class="book__product__info__form__select" id="cover">
+                <option>Hardback</option>
+                <option>Paperback</option>
+              </select>
+            </div>
+
+            <div class="book__product__info__form__select-container">
+              <label class="book__product__info__form__label" for="quantity">Qty:</label>
+              <input class="book__product__info__form__input"  type="number" id="quantity" min="1" value="1"/>
+            </div>
+
+            <button class="book__product__info__form__button" type="submit">Add to Cart</button>
+          </form>
+
+          <p class="book__product__info__contact">If you are interested in wholesale purchase, please <a href="/contact">contact Swan Story.</a></p>
+        </div>
+      <div>
+    </section>
+    <div class="book__contributors">
+      <div class="book__contributors-container">
+        <div class="book__contributors__box">
+          <h2 class="book__contributors__box__heading">Author</h2>
+          <div class="book__contributors__box__info">
+            <h3 class="book__contributors__box__name">C.J. Swan</h3>
+            <p class="book__contributors__box__copy">C.J. has a passion for the imaginations, development and potential of children. She has been sharing stories with her students and family for many years, and now she is excited to share some of them with you. </p>
+            <a class="book__contributors__box__cta" href="#">More about C.J.</a>
+          </div>
+        </div>
+
+        <div class="book__contributors__box">
+          <h2 class="book__contributors__box__heading">Illustrator</h2>
+          <div class="book__contributors__box__info">
+            <h3 class="book__contributors__box__name">Dana Zimmerman</h3>
+            <p class="book__contributors__box__copy">Dana has been an artist since her childhood. She started by recreating the images in her library books, and now her vivid illustrations bring stories, like Sticks, to life. </p>
+            <a class="book__contributors__box__cta" href="#">More about Dana</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="book__share">
+      <div class="book__share-container">
+        <p>Love this book? Share it with your friends!</p>
+        <ul class="book__share__social">
+          <li class="book__share__social__item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.sharelinkgenerator.com/"><img src="img/facebook-white.png"/></a>
+          </li>
+          <li class="book__share__social__item">
+            <a href="https://twitter.com/home?status=http%3A//www.sharelinkgenerator.com/"><img src="img/twitter-white.png"/></a>
+          </li>
+          <li class="book__share__social__item">
+            <a href="mailto:?subject=Swan Story Book&body=Hi,I found this website
+and thought you might like it http://www.google.com"><img src="img/email-white.png"/></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container container">
+        <a class="footer__logo" href="#">
+          <img class="footer__logo__img" src="img/footer-logo.png"/>
+        </a>
+        <ul class="footer__info">
+          <li class="footer__info__item">Swan Story</li>
+          <li class="footer__info__item">Copyright &copy; 2017</li>
+          <li class="footer__info__item">Site by <a class="footer__info__item__link" href="http://www.ashleykunze.com">Ashley Kunze</a></li>
+        </ul>
+        <a class="footer__social" href="#">
+          <img class="footer__social__img" src="img/footer-facebook-logo.png"/>
+        </a>
+      </div>
+    </footer>
+
+    <!-- assets -->
+    <script src="build/bundle.js"></script>
+
+    <!-- typekit -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'sce3jvl',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+</body>
+</html>
