@@ -2,7 +2,7 @@
 @import url(https://use.typekit.net/sce3jvl.css);@charset "UTF-8";
 @font-face {
   font-family: 'Swan Story Regular';
-  src: url(/fonts/SwanStory-Regular.ttf); }
+  src: url(../fonts/SwanStory-Regular.ttf); }
 
 * {
   padding: 0;
