@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 251 251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <rect id="Artboard1" x="0" y="0" width="250.02" height="250.02" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="Artboard11" serif:id="Artboard1" x="0" y="0" width="250.02" height="250.02"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <g id="Elasticsearch_3_" transform="matrix(2.12525,0,0,2.12525,8.86509,5.996)">
+            <path d="M73.1,44L52.2,44C52.3,44.5 52.5,45 52.6,45.4C53.3,47.8 53.7,50.3 53.9,52.9C54,53.9 54,55 54,56C54,57 54,58.1 53.9,59.1C53.7,61.7 53.3,64.2 52.6,66.6C52.5,67.1 52.3,67.6 52.2,68L73.1,68C79.7,68 85,62.6 85,56C85,49.4 79.7,44 73.1,44Z" style="fill:rgb(0,169,229);fill-rule:nonzero;"/>
+            <path d="M53.9,59.1C54,58.1 54,57 54,56C54,55 54,53.9 53.9,52.9C53.7,50.3 53.3,47.8 52.6,45.4C52.5,44.9 52.3,44.4 52.2,44L19.8,44C18.6,47.8 18,51.8 18,56C18,60.2 18.6,64.2 19.8,68L52.1,68C52.2,67.5 52.4,67 52.5,66.6C53.2,64.2 53.7,61.7 53.9,59.1Z" style="fill:rgb(53,53,53);fill-rule:nonzero;"/>
+            <path d="M76.7,72L50.7,72C49.9,73.8 49,75.5 48,77.1C46.5,79.6 44.7,81.8 42.7,83.9C42,84.6 41.3,85.2 40.6,85.9C39.2,87.2 37.6,88.3 36,89.4C42.3,93.6 49.9,96 58,96C71.9,96 84.1,88.9 91.3,78.2C87.6,74.4 82.4,72 76.7,72Z" style="fill:rgb(0,191,179);fill-rule:nonzero;"/>
+            <path d="M48,77.1C49,75.5 49.9,73.8 50.7,72L21.3,72C24.4,79.1 29.5,85.2 36,89.4C37.6,88.3 39.1,87.2 40.6,85.9C41.3,85.3 42,84.6 42.7,83.9C44.6,81.9 46.4,79.6 48,77.1Z" style="fill:rgb(1,155,143);fill-rule:nonzero;"/>
+            <g>
+                <path d="M42.6,28.1C41.9,27.4 41.2,26.8 40.5,26.1C39.1,24.8 37.5,23.7 35.9,22.6C29.6,26.8 24.5,32.9 21.3,40L50.6,40C49.8,38.2 48.9,36.5 47.9,34.9C46.4,32.4 44.6,30.1 42.6,28.1Z" style="fill:rgb(249,177,16);fill-rule:nonzero;"/>
+                <path d="M58,16C49.9,16 42.3,18.4 36,22.6C37.6,23.7 39.1,24.8 40.6,26.1C41.3,26.7 42,27.4 42.7,28.1C44.7,30.2 46.5,32.4 48,34.9C49,36.5 49.9,38.2 50.7,40L76.7,40C82.4,40 87.6,37.6 91.3,33.8C84.1,23.1 71.9,16 58,16Z" style="fill:rgb(254,209,10);fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>
