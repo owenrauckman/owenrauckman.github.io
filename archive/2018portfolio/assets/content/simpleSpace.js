@@ -6,7 +6,7 @@ module.exports = {
   secondary: '#ff915e',
   textColor: 'white',
   summary: 'Home and Office Organization',
-  projectLink: 'http://getsimple.space/',
+  projectLink: 'https://getsimple.space/',
   sourceLink: 'https://github.com/owenrauckman/simplespace',
   highlights: [
     {

@@ -6,7 +6,7 @@ module.exports = {
   secondary: '#3d4aa6',
   textColor: 'white',
   summary: 'Search Engine for Direct Sales Consultants',
-  projectLink: 'https://github.com/owenrauckman/hps/tree/free',
+  projectLink: 'https://directio.herokuapp.com/',
   sourceLink: 'https://github.com/owenrauckman/hps/tree/free',
   highlights: [
     {

@@ -6,8 +6,8 @@ module.exports = {
   secondary: '#fa755a',
   textColor: 'white',
   summary: 'Lawn Treatment Site + Quotes',
-  projectLink: 'https://github.com/owenrauckman/owenrauckman.github.io/tree/master/archive',
-  sourceLink: 'https://github.com/owenrauckman/owenrauckman.github.io/tree/master/archive',
+  projectLink: 'https://github.com/owenrauckman/owenrauckman.github.io/tree/master/archive/greenagain',
+  sourceLink: 'https://github.com/owenrauckman/owenrauckman.github.io/tree/master/archive/greenagain',
   highlights: [
     {
       heading: 'Generate more leads from the web',
@@ -17,7 +17,7 @@ module.exports = {
     {
       heading: 'Get an instant quote',
       copy: "Enter your address, trace your yard, and get an instant quote!",
-      image: 'greenagain/greenagain-2.jpg', 
+      image: 'greenagain/greenagain-2.jpg',
     },
   ],
   stack: ['Javascript', 'Google Maps', 'Wordpress', 'Sketch'],

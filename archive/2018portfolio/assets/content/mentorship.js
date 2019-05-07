@@ -6,13 +6,13 @@ module.exports = {
   secondary: '#ef476f',
   textColor: 'white',
   summary: 'Connecting Mentors and Mentees',
-  projectLink: 'https://github.com/owenrauckman/mentorship',
+  projectLink: 'http://sailmentorship.herokuapp.com/',
   sourceLink: 'https://github.com/owenrauckman/mentorship',
   highlights: [
     {
       heading: 'Get paired with the right person',
       copy: 'Want to learn a new skill? Search for a mentor. Looking to teach someone? Search for a mentee',
-      image: 'mentorship/mentorship-1.jpg', 
+      image: 'mentorship/mentorship-1.jpg',
     },
     {
       heading: 'Chat online',
