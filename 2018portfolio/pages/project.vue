@@ -9,6 +9,13 @@ import Case from '@/components/Case.vue';
 import config from '@/assets/config';
 
 export default {
+  created() {
+    // Google should pick this up even though its client side rendered 
+    if(process.browser){
+      document.title = config[this.$route.name].formattedName;
+      document.head.querySelector('meta[name=description]').content = config[this.$route.name].summary;
+    }
+  },
   components: {
     case: Case,
   },

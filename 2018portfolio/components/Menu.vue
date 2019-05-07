@@ -2,7 +2,7 @@
   <div @click="$emit('toggleMenu', '')" :class="['menu', menuActive ? 'menu--active': '']">
     <ul class="nav">
       <li class="nav__item">
-        <router-link :to="{name: 'directio'}" class="nav__item__link">Portfolio</router-link>
+        <router-link :to="{name: 'simpleSpace'}" class="nav__item__link">Portfolio</router-link>
       </li>
       <li class="nav__item">
         <router-link :to="{name: 'who'}" class="nav__item__link">Who</router-link>

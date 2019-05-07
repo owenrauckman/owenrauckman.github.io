@@ -5,7 +5,7 @@
         <h1 class="content__heading">
           Hello, I'm Owen -<br>A digital problem solver
         </h1>
-        <app-button :props="{color: 'blue', text: 'Portfolio', page: 'directio'}"/>
+        <app-button :props="{color: 'blue', text: 'Portfolio', page: 'simpleSpace'}"/>
       </div>
       <div class="shape"></div>
       <svg class="shape__edge shape__edge--desktop" viewBox="0 0 2532 516" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M1265.647.004L2531.282 292.71v222.66H.012L1265.647.004z" fill="#4542f1"/></svg>
@@ -21,6 +21,13 @@ import Button from '@/components/Button.vue';
 import Shape from '@/components/Shape.vue';
 
 export default {
+  // Setting back to my name in case user clicks back to home from projects page
+  created(){
+    if(process.browser){
+      document.title = 'Owen Rauckman';
+      document.head.querySelector('meta[name=description]').content = `Hello, I'm Owen. I design UIs, build web apps, write backend services, and anything in between.`;
+    }
+  },
   components: {
     'app-header': Header,
     'app-button': Button,

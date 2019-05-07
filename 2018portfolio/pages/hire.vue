@@ -73,6 +73,12 @@ import Button from '@/components/Button.vue';
 import config from '@/assets/config';
 
 export default {
+  head: {
+    title: 'Hire',
+    meta: [
+      { name: 'description', content: `Let's Work. Tell me about yourself and your project.` }
+    ],
+  },
   components: {
     'app-header': Header,
     'app-button': Button,

@@ -18,11 +18,11 @@
           passionate about great design and cutting edge tech. I love to create, build, and
            learn. I started my career as a developer with an eye for design, but my curiousity
            drove me to explore the full stack of software engineering. You can catch me designing UIs,
-            building isomorphic javascript apps, writing backend services, or anything in between.
+            building universal javascript apps, writing backend services, or anything in between.
         </p>
       </div>
       <div class="resume">
-        <a href="/owenRauckmanResume2018.pdf" target="_blank" class="button">
+        <a href="/owenRauckmanResume2019.pdf" target="_blank" class="button">
           <span class="button__span button__span--blue">Resume</span>
         </a>
       </div>
@@ -33,133 +33,133 @@
           <a class="block" href="https://nodejs.org">
             <img src="../assets/who/blocks/node.svg"/>
             <p class="block__name">Node</p>
-            <p class="block__experience">5+ years</p>
+            <p class="block__experience">6+ years</p>
           </a>
 
           <a class="block" href="https://expressjs.com/">
             <img src="../assets/who/blocks/express.svg"/>
             <p class="block__name">Express</p>
-            <p class="block__experience">5+ years</p>
+            <p class="block__experience">6+ years</p>
           </a>
 
           <a class="block" href="https://www.ecma-international.org/ecma-262/6.0/">
             <img src="../assets/who/blocks/javascript.svg"/>
             <p class="block__name">Javascript</p>
-            <p class="block__experience">9+ years</p>
+            <p class="block__experience">10+ years</p>
           </a>
 
           <a class="block" href="https://vuejs.org/">
             <img src="../assets/who/blocks/vue.svg"/>
             <p class="block__name">Vue</p>
-            <p class="block__experience">3+ years</p>
+            <p class="block__experience">4+ years</p>
           </a>
 
           <a class="block" href="https://reactjs.org/">
             <img src="../assets/who/blocks/react.svg"/>
             <p class="block__name">React / Native</p>
-            <p class="block__experience">1+ years</p>
+            <p class="block__experience">2+ years</p>
           </a>
 
           <a class="block" href="http://backbonejs.org/">
             <img src="../assets/who/blocks/backbone.svg"/>
             <p class="block__name">Backbone</p>
-            <p class="block__experience">3+ years</p>
+            <p class="block__experience">4+ years</p>
           </a>
 
           <a class="block" href="https://webpack.js.org/">
             <img src="../assets/who/blocks/webpack.svg"/>
             <p class="block__name">Webpack</p>
-            <p class="block__experience">1+ years</p>
+            <p class="block__experience">2+ years</p>
           </a>
 
           <a class="block" href="https://www.w3.org/TR/css-2015/">
             <img src="../assets/who/blocks/css.svg"/>
             <p class="block__name">CSS</p>
-            <p class="block__experience">12+ years</p>
+            <p class="block__experience">13+ years</p>
           </a>
 
           <a class="block" href="https://sass-lang.com/">
             <img src="../assets/who/blocks/sass.svg"/>
             <p class="block__name">SASS</p>
-            <p class="block__experience">5+ years</p>
+            <p class="block__experience">6+ years</p>
           </a>
 
           <a class="block" href="https://www.w3.org/">
             <img src="../assets/who/blocks/html.svg"/>
             <p class="block__name">HTML</p>
-            <p class="block__experience">12+ years</p>
+            <p class="block__experience">13+ years</p>
           </a>
 
           <a class="block" href="https://www.contentful.com">
             <img src="../assets/who/blocks/contentful.svg"/>
             <p class="block__name">Contentful</p>
-            <p class="block__experience">1+ years</p>
+            <p class="block__experience">2+ years</p>
           </a>
 
           <a class="block" href="https://www.elastic.co/">
             <img src="../assets/who/blocks/elasticsearch.svg"/>
             <p class="block__name">Elasticsearch</p>
-            <p class="block__experience">1+ years</p>
+            <p class="block__experience">2+ years</p>
           </a>
 
           <a class="block" href="https://www.mongodb.com/">
             <img src="../assets/who/blocks/mongodb.svg"/>
             <p class="block__name">MongoDB</p>
-            <p class="block__experience">3+ years</p>
+            <p class="block__experience">4+ years</p>
           </a>
 
           <a class="block" href="https://www.graphql.org/">
             <img src="../assets/who/blocks/graphql.svg"/>
             <p class="block__name">GraphQL</p>
-            <p class="block__experience">1+ years</p>
+            <p class="block__experience">2+ years</p>
           </a>
 
           <a class="block" href="https://www.cloudfoundry.org/">
             <img src="../assets/who/blocks/cloudfoundry.svg"/>
             <p class="block__name">Cloud Foundry</p>
-            <p class="block__experience">2+ years</p>
+            <p class="block__experience">3+ years</p>
           </a>
 
           <a class="block" href="https://www.heroku.com/">
             <img src="../assets/who/blocks/heroku.svg"/>
             <p class="block__name">Heroku</p>
-            <p class="block__experience">4+ years</p>
+            <p class="block__experience">5+ years</p>
           </a>
 
           <a class="block" href="https://www.do.co/">
             <img src="../assets/who/blocks/digitalocean.svg"/>
             <p class="block__name">Digital Ocean</p>
-            <p class="block__experience">2+ years</p>
+            <p class="block__experience">3+ years</p>
           </a>
 
           <a class="block" href="https://serverless.com/framework/">
             <img src="../assets/who/blocks/serverless.svg"/>
             <p class="block__name">Serverless</p>
-            <p class="block__experience">1+ years</p>
+            <p class="block__experience">2+ years</p>
           </a>
 
           <a class="block" href="https://jenkins.io/">
             <img src="../assets/who/blocks/jenkins.svg"/>
             <p class="block__name">Jenkins</p>
-            <p class="block__experience">2+ years</p>
+            <p class="block__experience">3+ years</p>
           </a>
 
           <a class="block" href="https://git-scm.com/">
             <img src="../assets/who/blocks/git.svg"/>
             <p class="block__name">Git</p>
-            <p class="block__experience">5+ years</p>
+            <p class="block__experience">6+ years</p>
           </a>
 
           <a class="block" href="https://sketchapp.com/">
             <img src="../assets/who/blocks/sketch.svg"/>
             <p class="block__name">Sketch</p>
-            <p class="block__experience">2+ years</p>
+            <p class="block__experience">3+ years</p>
           </a>
 
           <a class="block" href="https://invisionapp.com/">
             <img src="../assets/who/blocks/invision.svg"/>
             <p class="block__name">Invision</p>
-            <p class="block__experience">4+ years</p>
+            <p class="block__experience">5+ years</p>
           </a>
 
 
@@ -175,6 +175,12 @@ import Button from '@/components/Button.vue';
 import config from '@/assets/config';
 
 export default {
+  head: {
+    title: 'Who',
+    meta: [
+      { name: 'description', content: `I'm just an average guy from the Midwest who is passionate about great design and cutting edge tech.` }
+    ],
+  },
   components: {
     'app-header': Header,
     'app-button': Button,

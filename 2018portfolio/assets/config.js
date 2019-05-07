@@ -8,12 +8,12 @@ const greenAgain = require('./content/greenAgain');
 const garmin = require('./content/garmin');
 
 module.exports = {
+  simpleSpace,
   directio,
   mentorship,
+  garmin,
   nbaStats,
-  simpleSpace,
   famousKing,
   stacks,
   greenAgain,
-  garmin,
 };
