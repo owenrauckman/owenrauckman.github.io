@@ -404,6 +404,7 @@ export default {
   }
   img{
     max-width: 80px;
+    width: 80px;
   }
   &:hover{
     cursor: pointer;
