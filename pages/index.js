@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import { homePageData } from "../data";
 
 export default function Home() {
   return (
@@ -13,7 +14,22 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}></main>
+      <main>
+        <div className={styles.projectContainer}>
+          {homePageData.map((project, index) => (
+            <div
+              key={index}
+              style={{
+                background: `linear-gradient(180deg, ${project.gradientStart} 0%, ${project.gradientStop}  100%)`
+              }}
+              className={styles.project}
+            >
+              <div className={styles.projectName}>{project.title}</div>
+              <img className={styles.projectImage} src={project.image} />
+            </div>
+          ))}
+        </div>
+      </main>
     </div>
   );
 }

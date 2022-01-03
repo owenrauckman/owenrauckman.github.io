@@ -1,0 +1,76 @@
+.projectContainer {
+  display: grid;
+  grid-gap: 20px;
+  padding: 16px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+  @media screen and (min-width: 640px) {
+    grid-gap: 40px;
+  }
+}
+
+.project {
+  border-radius: 30px;
+  padding: 10vw 60px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--main-box-shadow);
+  transition: all 0.3s ease;
+  padding-bottom: 50%;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 10vw;
+  }
+  &:hover {
+    box-shadow: var(--main-box-shadow-hover);
+    .projectImage {
+      bottom: -11vw;
+      transform: scale(1.05);
+    }
+    .projectName {
+      @media screen and (min-width: 768px) {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+.projectName {
+  font-family: var(--font-poppins);
+  font-weight: 700;
+  letter-spacing: -0.02rem;
+  color: var(--color-white);
+  transform: scale(1);
+  transform-origin: center;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    transform-origin: left;
+  }
+}
+.projectImage {
+  width: auto;
+  position: absolute;
+  bottom: -12vw;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 50vw;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 10vw;
+    height: 30vw;
+    left: unset;
+    right: 5vw;
+  }
+}
