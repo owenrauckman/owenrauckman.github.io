@@ -23,6 +23,9 @@
   align-items: center;
   grid-gap: 20px;
 }
+.rightNoGap {
+  grid-gap: 0px;
+}
 
 .logo {
   box-shadow: var(--main-box-shadow);
@@ -81,10 +84,75 @@
 
 .nav {
   background: var(--color-black);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
   z-index: +1;
+  overflow: auto;
+}
+
+.navContainer {
+  color: var(--color-white);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80vw;
+  max-width: 840px;
+  height: 100%;
+  margin-top: 160px;
+  display: block;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20vw;
+  }
+}
+
+.navHeading {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  @media screen and (min-width: 640px) {
+    font-size: 1rem;
+  }
+}
+
+.navList {
+  padding: 0;
+  margin: 20px 0 0 0;
+  @media screen and (min-width: 640px) {
+    margin: 30px 0 0 0;
+  }
+}
+
+.navItem {
+  list-style: none;
+  font-family: var(--font-poppins);
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.01rem;
+  color: var(--color-white);
+  margin-bottom: 20px;
+  @media screen and (min-width: 640px) {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+.navRight {
+  margin-top: 60px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
 }

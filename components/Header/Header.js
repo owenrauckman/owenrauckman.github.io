@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 
 function Header({ showHireButton = false }) {
   const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    if (navOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+  }, [navOpen]);
+
   return (
     <>
       <div className={styles.header}>
@@ -23,8 +29,10 @@ function Header({ showHireButton = false }) {
             />
           </svg>
         </div>
-        <div className={styles.right}>
-          {showHireButton && <div className={styles.hireButton}>Hire me</div>}
+        <div className={`${styles.right} ${navOpen ? styles.rightNoGap : ""}`}>
+          {showHireButton && !navOpen && (
+            <div className={styles.hireButton}>Hire me</div>
+          )}
           <div
             className={styles.hamburgerContainer}
             onClick={() => setNavOpen(!navOpen)}
@@ -66,7 +74,26 @@ function Header({ showHireButton = false }) {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
-          />
+          >
+            <div className={styles.navContainer}>
+              <div>
+                <div className={styles.navHeading}>Projects</div>
+                <ul className={styles.navList}>
+                  <li className={styles.navItem}>Tryna</li>
+                  <li className={styles.navItem}>FanThreeSixty</li>
+                  <li className={styles.navItem}>AP Robotics</li>
+                  <li className={styles.navItem}>The Vault</li>
+                </ul>
+              </div>
+              <div className={styles.navRight}>
+                <div className={styles.navHeading}>Pages</div>
+                <ul className={styles.navList}>
+                  <li className={styles.navItem}>Home</li>
+                  <li className={styles.navItem}>About</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>
