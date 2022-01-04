@@ -40,7 +40,7 @@ function PageTemplate({ data }) {
         className={styles.description}
         data-sal="fade"
         data-sal-delay="1000"
-        data-sal-duration="1000"
+        data-sal-duration="500"
       >
         {data.description}
       </div>
@@ -48,6 +48,7 @@ function PageTemplate({ data }) {
       <div
         className={styles.calloutGrid}
         data-sal="fade"
+        data-sal-delay="1000"
         data-sal-duration="1000"
       >
         {data.details.map((detail, index) => (

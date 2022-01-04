@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Project.module.scss";
 import PageTemplate from "../../components/PageTemplate/PageTemplate";
+import NextSection from "../../components/NextSection/NextSection";
+
 import { trynaData } from "../../data";
 
 export default function Tryna() {
@@ -18,6 +20,7 @@ export default function Tryna() {
       <main>
         <PageTemplate data={trynaData} />
       </main>
+      <NextSection data={trynaData} />
     </div>
   );
 }

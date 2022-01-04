@@ -30,7 +30,7 @@
     }
     .projectName {
       @media screen and (min-width: 768px) {
-        transform: translateY(-40%);
+        transform: translateY(-40%) scale(0.9);
       }
     }
   }

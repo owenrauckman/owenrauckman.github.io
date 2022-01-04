@@ -1,8 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
+import Link from "next/link";
 import styles from "../../styles/Project.module.scss";
 import { fanThreeSixtyData } from "../../data";
 import PageTemplate from "../../components/PageTemplate/PageTemplate";
+import NextSection from "../../components/NextSection/NextSection";
 
 export default function FanThreeSixty() {
   return (
@@ -18,6 +19,7 @@ export default function FanThreeSixty() {
       <main>
         <PageTemplate data={fanThreeSixtyData} />
       </main>
+      <NextSection data={fanThreeSixtyData} />
     </div>
   );
 }

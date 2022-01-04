@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../../styles/Project.module.scss";
 import { apRoboticsData } from "../../data";
 import PageTemplate from "../../components/PageTemplate/PageTemplate";
+import NextSection from "../../components/NextSection/NextSection";
 
 export default function FanThreeSixty() {
   return (
@@ -18,6 +19,7 @@ export default function FanThreeSixty() {
       <main>
         <PageTemplate data={apRoboticsData} />
       </main>
+      <NextSection data={apRoboticsData} />
     </div>
   );
 }

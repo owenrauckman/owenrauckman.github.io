@@ -57,7 +57,11 @@ export const trynaData = {
         "The approach is simple: create events, invite your friends, and manage your squads. No group texts, no pressure. You’re either in or out. \n Spend less time your apps, and more time together!",
       image: "/tryna-section-1.png"
     }
-  ]
+  ],
+  next: {
+    name: "FanThreeSixty",
+    link: "/projects/fanthreesixty"
+  }
 };
 
 export const fanThreeSixtyData = {
@@ -100,7 +104,11 @@ export const fanThreeSixtyData = {
         "Edit the content in your app from anywhere with a mobile-friendly, drag-and-drop app manager.",
       image: "/fanthreesixty-section-3.png"
     }
-  ]
+  ],
+  next: {
+    name: "AP Robotics",
+    link: "/projects/ap-robotics"
+  }
 };
 
 export const apRoboticsData = {
@@ -143,5 +151,9 @@ export const apRoboticsData = {
         "Lots of data, boiled down into simple, predictable, UI components so that users can spend less time guessing, and more time working",
       image: "/ap-robot-section-3.png"
     }
-  ]
+  ],
+  next: {
+    name: "Tryna",
+    link: "/projects/tryna"
+  }
 };
