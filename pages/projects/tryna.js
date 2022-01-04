@@ -6,7 +6,7 @@ import { trynaData } from "../../data";
 
 export default function Tryna() {
   return (
-    <div className={styles.container}>
+    <div className={styles.hello}>
       <Head>
         <title>Owen Rauckman | Tryna</title>
         <meta
