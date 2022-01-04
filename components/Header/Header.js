@@ -32,7 +32,7 @@ function Header({ showHireButton = false }) {
   return (
     <>
       <div className={styles.header}>
-        <Link href="/">
+        <Link href="/" onClick={() => setNavOpen(false)}>
           <a>
             <div className={styles.logo}>
               <svg
@@ -68,32 +68,18 @@ function Header({ showHireButton = false }) {
             className={styles.hamburgerContainer}
             onClick={() => setNavOpen(!navOpen)}
           >
-            {navOpen && (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="black"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className={styles.iconX}
+            <a href="#" className={styles.menuButton}>
+              <div
+                className={`${styles.menuIcon} ${
+                  navOpen ? styles.isActive : ""
+                }`}
               >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            )}
-
-            {!navOpen && (
-              <svg
-                viewBox="0 0 18 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className={styles.iconHamburger}
-              >
-                <path fill="#000" d="M0 0h18v2H0zM0 6h18v2H0zM0 12h18v2H0z" />
-              </svg>
-            )}
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
           </div>
         </div>
       </div>

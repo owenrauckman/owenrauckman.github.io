@@ -231,3 +231,54 @@
   max-width: 1140px;
   padding: 0 16px;
 }
+
+// animated hamburger
+$menuIcon-width: 20px;
+$menuIcon-height: 12px;
+$menuIcon-color: var(--color-black);
+
+.menuIcon {
+  position: relative;
+  width: $menuIcon-width;
+  height: $menuIcon-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuIcon span {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: $menuIcon-color;
+  transition: all 250ms ease-in-out;
+  transform: rotate(0deg);
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.menuIcon span:nth-child(1) {
+  top: 0;
+}
+
+.menuIcon span:nth-child(2),
+.menuIcon span:nth-child(3) {
+  top: 6px;
+}
+
+.menuIcon span:nth-child(4) {
+  top: 12px;
+}
+
+.menuIcon.isActive span:nth-child(1),
+.menuIcon.isActive span:nth-child(4) {
+  opacity: 0;
+}
+
+.menuIcon.isActive span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menuIcon.isActive span:nth-child(3) {
+  top: 6px;
+  transform: rotate(-45deg);
+}
