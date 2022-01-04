@@ -14,37 +14,38 @@ function Header({ showHireButton = false }) {
   return (
     <>
       <div className={styles.header}>
-        <div className={styles.logo}>
-          <Link href="/">
-            <svg
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+        <Link href="/">
+          <a>
+            <div className={styles.logo}>
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Owen Rauckman logo</title>
+                <path
+                  d="M2.531 4.983 17.3 1.03 2.53 18.69v-8.664l11.184 8.664"
+                  stroke="#000"
+                  strokeWidth="2"
+                  strokeMiterlimit="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </a>
+        </Link>
+        <div className={styles.right}>
+          <Link href="https://www.linkedin.com/in/owenrauckman/">
+            <a
+              className={`${styles.hireButton} ${
+                navOpen || !showHireButton ? styles.hideHireButton : ""
+              }`}
+              target="_blank"
             >
-              <title>Owen Rauckman logo</title>
-              <path
-                d="M2.531 4.983 17.3 1.03 2.53 18.69v-8.664l11.184 8.664"
-                stroke="#000"
-                strokeWidth="2"
-                strokeMiterlimit="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+              Hire me
+            </a>
           </Link>
-        </div>
-        <div
-          className={`${styles.right} ${
-            navOpen || !showHireButton ? styles.rightNoGap : ""
-          }`}
-        >
-          {showHireButton && !navOpen && (
-            <Link href="https://www.linkedin.com/in/owenrauckman/">
-              <a className={styles.hireButton} target="_blank">
-                Hire me
-              </a>
-            </Link>
-          )}
           <div
             className={styles.hamburgerContainer}
             onClick={() => setNavOpen(!navOpen)}
