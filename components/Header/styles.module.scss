@@ -8,12 +8,12 @@
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 16px 32px;
   z-index: +2;
   // backdrop-filter: blur(4px);
   @media screen and (min-width: 640px) {
     backdrop-filter: none;
-    padding: 40px 16px;
+    padding: 40px 32px; /* Page is 16px, but a few extra so it looks okay when we scroll over */
   }
 }
 
@@ -27,6 +27,29 @@
   grid-gap: 0px;
 }
 
+@keyframes logoBoop {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes logoBoopLight {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .logo {
   box-shadow: var(--main-box-shadow);
   background: var(--color-white);
@@ -34,10 +57,9 @@
   border-radius: 100px;
   cursor: pointer;
   margin-top: 0;
-  transition: all 0.3s ease;
   &:hover {
-    // margin-top: -4px;
     box-shadow: var(--main-box-shadow-hover);
+    animation: logoBoop 0.5s;
   }
   & svg {
     height: 20px;
@@ -53,10 +75,9 @@
   border-radius: 100px;
   margin-top: 0;
   cursor: pointer;
-  transition: all 0.3s ease;
   &:hover {
-    // margin-top: -4px;
     box-shadow: var(--main-box-shadow-hover);
+    animation: logoBoopLight 1s;
   }
 }
 
@@ -70,6 +91,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover {
+    animation: logoBoopLight 1s;
+  }
 }
 
 .iconHamburger {
@@ -104,7 +128,7 @@
   width: 80vw;
   max-width: 840px;
   height: 100%;
-  margin-top: 160px;
+  margin-top: 120px;
   display: block;
   @media screen and (min-width: 768px) {
     margin-top: 0;
