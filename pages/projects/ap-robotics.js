@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Project.module.scss";
+import { apRoboticsData } from "../../data";
 import PageTemplate from "../../components/PageTemplate/PageTemplate";
-import { trynaData } from "../../data";
 
-export default function Tryna() {
+export default function FanThreeSixty() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Owen Rauckman | Tryna</title>
+        <title>Owen Rauckman | AP Robotics</title>
         <meta
           name="description"
           content="Hello, I'm Owen. I design UIs, build web apps, write backend services, and anything in between."
@@ -16,7 +16,7 @@ export default function Tryna() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <PageTemplate data={trynaData} />
+        <PageTemplate data={apRoboticsData} />
       </main>
     </div>
   );

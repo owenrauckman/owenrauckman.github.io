@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 
-function Header({ showHireButton = false }) {
+function ProjectCard({ showHireButton = false }) {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -31,4 +31,4 @@ function Header({ showHireButton = false }) {
   );
 }
 
-export default Header;
+export default ProjectCard;

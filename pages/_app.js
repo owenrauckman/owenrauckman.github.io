@@ -42,7 +42,7 @@ const slideRight = {
     },
     exit: {
       opacity: 0,
-      left: "-100%",
+      top: "100vh",
       scale: 0.6
     }
   },

@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 
-function Header() {
+function Footer() {
   return (
     <div className={styles.footer}>
       <div>©{new Date().getFullYear()} Owen Rauckman</div>
@@ -72,4 +72,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Footer;
