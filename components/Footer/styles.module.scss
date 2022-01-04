@@ -1,4 +1,10 @@
 .footer {
+  --email-fill: #808080; /* Same as black 50, but SVG transparency was weird */
+  &[data-theme="dark"] {
+    --color-black: var(--color-white);
+    --color-black-50: rgba(255, 255, 255, 0.5);
+    --email-fill: #808080;
+  }
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
@@ -20,14 +26,25 @@
     width: auto;
     path {
       transition: all 0.3s ease;
-
-      fill: #808080; /* Same as black 50, but SVG transparency was weird */
+      fill: var(--email-fill);
+    }
+    &.emailIcon {
+      path {
+        fill: transparent;
+        stroke: var(--email-fill);
+      }
     }
   }
   &:hover {
     & svg {
       path {
         fill: var(--color-black);
+      }
+      &.emailIcon {
+        path {
+          fill: transparent;
+          stroke: var(--color-black);
+        }
       }
     }
   }

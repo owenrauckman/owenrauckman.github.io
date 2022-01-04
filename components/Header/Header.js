@@ -2,14 +2,32 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./styles.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router";
+import Footer from "../Footer/Footer";
 
 function Header({ showHireButton = false }) {
   const [navOpen, setNavOpen] = useState(false);
+  const router = useRouter();
 
+  /* Disable scrolling when nav is open */
   useEffect(() => {
     if (navOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "auto";
   }, [navOpen]);
+
+  /* Close nav on route change */
+  useEffect(() => {
+    const handleRouteChange = (url, { shallow }) => {
+      setNavOpen(false);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    /* Unsubscribe on unmount */
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, []);
 
   return (
     <>
@@ -92,19 +110,46 @@ function Header({ showHireButton = false }) {
               <div>
                 <div className={styles.navHeading}>Projects</div>
                 <ul className={styles.navList}>
-                  <li className={styles.navItem}>Tryna</li>
-                  <li className={styles.navItem}>FanThreeSixty</li>
-                  <li className={styles.navItem}>AP Robotics</li>
-                  <li className={styles.navItem}>The Vault</li>
+                  <li className={styles.navItem}>
+                    <Link href="/projects/tryna">
+                      <a>Tryna</a>
+                    </Link>
+                  </li>
+                  <li className={styles.navItem}>
+                    <Link href="/projects/fanthreesixty">
+                      <a>FanThreeSixty</a>
+                    </Link>
+                  </li>
+                  <li className={styles.navItem}>
+                    <Link href="/projects/ap-robotics">
+                      <a>AP Robotics</a>
+                    </Link>
+                  </li>
+                  <li className={styles.navItem}>
+                    <Link href="https://www.owenrauckman.com">
+                      <a target="_blank">The Vault</a>
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div className={styles.navRight}>
                 <div className={styles.navHeading}>Pages</div>
                 <ul className={styles.navList}>
-                  <li className={styles.navItem}>Home</li>
-                  <li className={styles.navItem}>About</li>
+                  <li className={styles.navItem}>
+                    <Link href="/">
+                      <a>Home</a>
+                    </Link>
+                  </li>
+                  <li className={styles.navItem}>
+                    <Link href="/about">
+                      <a>About Me</a>
+                    </Link>
+                  </li>
                 </ul>
               </div>
+            </div>
+            <div className={styles.footerContainer}>
+              <Footer theme="dark" />
             </div>
           </motion.div>
         )}
