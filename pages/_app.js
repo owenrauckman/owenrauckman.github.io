@@ -2,14 +2,15 @@ import styles from "../styles/globals.css";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { AnimatePresence, domAnimation, LazyMotion, m } from "framer-motion";
+import { useEffect } from "react";
 
 const slideUp = {
   name: "Slide Up",
   variants: {
     initial: {
       opacity: 0,
-      top: "100vh",
-      scale: 0.4
+      top: "10vh",
+      scale: 0.9
     },
     animate: {
       opacity: 1,
@@ -18,46 +19,71 @@ const slideUp = {
     },
     exit: {
       opacity: 0,
-      top: "100vh",
-      scale: 0.4
+      top: "0vh",
+      scale: 1
     }
   },
   transition: {
-    duration: 0.7
+    duration: 0.4
   }
 };
 
-const slideRight = {
-  name: "Slide Right",
+const fade = {
+  name: "Fade",
   variants: {
     initial: {
       opacity: 0,
-      left: "-100%",
-      scale: 0.6
+      top: "10vh",
+      scale: 1
     },
     animate: {
       opacity: 1,
-      left: 0,
+      top: "0vh",
       scale: 1
     },
     exit: {
       opacity: 0,
-      top: "100vh",
-      scale: 0.6
+      top: "0vh",
+      scale: 1
     }
   },
   transition: {
-    duration: 0.7
+    duration: 0.4
   }
 };
 
+// const slideRight = {
+//   name: "Slide Right",
+//   variants: {
+//     initial: {
+//       opacity: 0,
+//       left: "-100%",
+//       scale: 0.6
+//     },
+//     animate: {
+//       opacity: 1,
+//       left: 0,
+//       scale: 1
+//     },
+//     exit: {
+//       opacity: 0,
+//       top: "100vh",
+//       scale: 0.6
+//     }
+//   },
+//   transition: {
+//     duration: 0.7
+//   }
+// };
+
 function MyApp({ Component, pageProps, router }) {
-  const animation = router.route === "/" ? slideUp : slideRight;
+  const animation = router.route === "/" ? slideUp : fade;
+
   return (
     <div className="app-wrap">
       <Header showHireButton={pageProps.showHireButton} />
       <LazyMotion features={domAnimation}>
-        <AnimatePresence exitBeforeEnter={false}>
+        <AnimatePresence exitBeforeEnter={true}>
           <m.div
             key={router.route}
             className="page-wrap"

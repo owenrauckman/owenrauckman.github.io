@@ -25,12 +25,12 @@
   &:hover {
     box-shadow: var(--main-box-shadow-hover);
     .projectImage {
-      bottom: -15%;
+      bottom: -18%;
       transform: scale(1.05);
     }
     .projectName {
       @media screen and (min-width: 768px) {
-        transform: scale(0.75);
+        transform: translateY(-40%);
       }
     }
   }
