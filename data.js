@@ -157,3 +157,28 @@ export const apRoboticsData = {
     link: "/projects/tryna"
   }
 };
+
+export const aboutData = {
+  hobbies: [
+    {
+      emoji: "🏀",
+      name: "Hoops"
+    },
+    {
+      emoji: "👟",
+      name: "Running"
+    },
+    {
+      emoji: "🦆",
+      name: "Bird watching"
+    },
+    {
+      emoji: "🌱",
+      name: "Vegan Eats"
+    },
+    {
+      emoji: "🎧",
+      name: "Hip Hop"
+    }
+  ]
+};
