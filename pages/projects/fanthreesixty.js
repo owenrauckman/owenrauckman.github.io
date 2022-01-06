@@ -9,7 +9,7 @@ export default function FanThreeSixty() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Owen Rauckman | FanThreeSixty</title>
+        <title>FanThreeSixty | Owen Rauckman</title>
         <meta
           name="description"
           content="Hello, I'm Owen. I design UIs, build web apps, write backend services, and anything in between."

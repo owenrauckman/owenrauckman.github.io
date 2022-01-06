@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import Head from "next/head";
 import styles from "../styles/About.module.scss";
 import { aboutData } from "../data";
+import sal from "sal.js";
+import "sal.js/dist/sal.css";
 
 export default function Tryna() {
   useEffect(() => {
@@ -13,10 +15,14 @@ export default function Tryna() {
       );
   }, []);
 
+  useEffect(() => {
+    sal({ once: true, threshold: 0.5 }); // these are the defaults, but here for refernce
+  }, []);
+
   return (
     <div className={styles.hello}>
       <Head>
-        <title>Owen Rauckman | About Me</title>
+        <title>About | Owen Rauckman</title>
         <meta
           name="description"
           content="Hello, I'm Owen. I design UIs, build web apps, write backend services, and anything in between."
@@ -25,18 +31,33 @@ export default function Tryna() {
       </Head>
       <main className={styles.aboutContainer} id="js__about-container">
         <div className={styles.grid}>
-          <div className={styles.me}>
+          <div
+            className={styles.me}
+            data-sal="zoom-in"
+            data-sal-delay="100"
+            data-sal-duration="500"
+          >
             <img src="/owen-avi.png" className={styles.meImage} />
             <div>
               <div className={styles.meName}>Owen Rauckman</div>
               <div className={styles.meTitle}>Lead Software Engineer</div>
             </div>
           </div>
-          <div className={styles.location}>
+          <div
+            className={styles.location}
+            data-sal="zoom-in"
+            data-sal-delay="300"
+            data-sal-duration="500"
+          >
             <img src="/about-map.png" className={styles.locationMap} />
             <div className={styles.locationTitle}>Kansas City, MO</div>
           </div>
-          <div className={styles.contact}>
+          <div
+            className={styles.contact}
+            data-sal="zoom-in"
+            data-sal-delay="500"
+            data-sal-duration="500"
+          >
             <div className={styles.connectWrapper}>
               <a
                 href="https://twitter.com/owenrauckman"
@@ -102,7 +123,12 @@ export default function Tryna() {
               </a>
             </div>
           </div>
-          <div className={styles.hobbies}>
+          <div
+            className={styles.hobbies}
+            data-sal="zoom-in"
+            data-sal-delay="700"
+            data-sal-duration="500"
+          >
             <div className={styles.hobbiesWrapper}>
               {aboutData.hobbies.map((hobby, index) => (
                 <div key={index} className={styles.hobby}>
@@ -112,7 +138,12 @@ export default function Tryna() {
               ))}
             </div>
           </div>
-          <div className={styles.service}>
+          <div
+            className={styles.service}
+            data-sal="zoom-in"
+            data-sal-delay="200"
+            data-sal-duration="00"
+          >
             <div className={styles.serviceCallout}>
               <div className={styles.serviceHeading}>10+</div>
               <div className={styles.serviceDescription}>Years/Exp</div>
@@ -122,7 +153,12 @@ export default function Tryna() {
               <div className={styles.serviceDescription}>Clients Served</div>
             </div>
           </div>
-          <div className={styles.button}>
+          <div
+            className={styles.button}
+            data-sal="zoom-in"
+            data-sal-delay="500"
+            data-sal-duration="500"
+          >
             <div className={styles.resumeButton}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -142,6 +178,27 @@ export default function Tryna() {
             </div>
           </div>
         </div>
+
+        {/* Building Blocks */}
+        <div>
+          <div className={styles.buildingBlocksContainer}>
+            <div className={styles.buildingBlocksContent}>
+              <div className={styles.buildingBlocksHeading}>
+                Building Blocks
+              </div>
+              <div className={styles.buildingBlocksDescription}>
+                Here’s my digital toolset. I’m always learning new things.
+              </div>
+            </div>
+            <img
+              data-sal="zoom-in"
+              data-sal-delay="0"
+              data-sal-duration="1000"
+              className={styles.buildingBlocksImage}
+              src="/building-blocks.svg"
+            />
+          </div>
+        </div>
       </main>
     </div>
   );
@@ -151,7 +208,9 @@ export default function Tryna() {
 export async function getStaticProps() {
   return {
     props: {
-      showHireButton: false
+      showHireButton: true,
+      hireText: "Hire Me",
+      hireLink: "https://www.linkedin.com/in/owenrauckman/"
     }
   };
 }

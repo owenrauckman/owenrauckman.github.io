@@ -52,36 +52,16 @@ const fade = {
   }
 };
 
-// const slideRight = {
-//   name: "Slide Right",
-//   variants: {
-//     initial: {
-//       opacity: 0,
-//       left: "-100%",
-//       scale: 0.6
-//     },
-//     animate: {
-//       opacity: 1,
-//       left: 0,
-//       scale: 1
-//     },
-//     exit: {
-//       opacity: 0,
-//       top: "100vh",
-//       scale: 0.6
-//     }
-//   },
-//   transition: {
-//     duration: 0.7
-//   }
-// };
-
 function MyApp({ Component, pageProps, router }) {
   const animation = router.route === "/" ? slideUp : fade;
 
   return (
     <div className="app-wrap">
-      <Header showHireButton={pageProps.showHireButton} />
+      <Header
+        showHireButton={pageProps.showHireButton}
+        hireText={pageProps.hireText}
+        hireLink={pageProps.hireLink}
+      />
       <LazyMotion features={domAnimation}>
         <AnimatePresence exitBeforeEnter={true}>
           <m.div

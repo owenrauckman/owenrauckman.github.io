@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Footer from "../Footer/Footer";
 
-function Header({ showHireButton = false }) {
+function Header({ showHireButton = false, hireText = "", hireLink = "" }) {
   const [navOpen, setNavOpen] = useState(false);
   const router = useRouter();
 
@@ -54,14 +54,14 @@ function Header({ showHireButton = false }) {
           </a>
         </Link>
         <div className={styles.right}>
-          <Link href="https://www.linkedin.com/in/owenrauckman/">
+          <Link href={hireLink}>
             <a
               className={`${styles.hireButton} ${
                 navOpen || !showHireButton ? styles.hideHireButton : ""
               }`}
-              target="_blank"
+              target={hireText.includes("Owen") ? "_self" : "_blank"}
             >
-              Hire me
+              {hireText}
             </a>
           </Link>
           <div
@@ -128,7 +128,7 @@ function Header({ showHireButton = false }) {
                   </li>
                   <li className={styles.navItem}>
                     <Link href="/about">
-                      <a>About Me</a>
+                      <a>About</a>
                     </Link>
                   </li>
                 </ul>

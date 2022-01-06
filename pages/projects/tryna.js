@@ -10,7 +10,7 @@ export default function Tryna() {
   return (
     <div className={styles.hello}>
       <Head>
-        <title>Owen Rauckman | Tryna</title>
+        <title>Tryna | Owen Rauckman</title>
         <meta
           name="description"
           content="Hello, I'm Owen. I design UIs, build web apps, write backend services, and anything in between."

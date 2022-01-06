@@ -44,7 +44,9 @@ export default function Home() {
 export async function getStaticProps() {
   return {
     props: {
-      showHireButton: true
+      showHireButton: true,
+      hireText: "Meet Owen",
+      hireLink: "/about"
     }
   };
 }
