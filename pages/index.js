@@ -10,9 +10,10 @@ export default function Home() {
         <title>Owen Rauckman</title>
         <meta
           name="description"
-          content="Hello, I'm Owen. I design UIs, build web apps, write backend services, and anything in between."
+          content="Hey there, I'm Owen. I design UIs, build web apps, write backend services, and anything in between"
         />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="/og-meta.jpg" key="ogimage" />
       </Head>
       <main>
         <div className={styles.projectContainer}>

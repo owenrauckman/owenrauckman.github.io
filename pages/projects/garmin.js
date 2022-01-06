@@ -12,9 +12,10 @@ export default function Garmin() {
         <title>Garmin | Owen Rauckman</title>
         <meta
           name="description"
-          content="Hello, I'm Owen. I design UIs, build web apps, write backend services, and anything in between."
+          content="An exploration of my work with Garmin"
         />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="/og-meta.jpg" key="ogimage" />
       </Head>
       <main>
         <PageTemplate data={garminData} />
