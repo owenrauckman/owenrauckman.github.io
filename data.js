@@ -21,11 +21,11 @@ export const homePageData = [
     gradientStop: "rgba(190,55,144,1)"
   },
   {
-    title: "The Vault",
-    link: "https://www.owenrauckman.com",
-    image: "/the-vault-home.png",
-    gradientStart: "rgba(251,224,76,1)",
-    gradientStop: "rgba(237,203,14,1)"
+    title: "Garmin",
+    link: "/projects/garmin",
+    image: "/garmin-home.png",
+    gradientStart: "#60cff6",
+    gradientStop: "#00a0d9"
   }
 ];
 
@@ -39,7 +39,7 @@ export const trynaData = {
   details: [
     {
       title: "Expertise",
-      description: "UX/UI Design, Mobile Development, & Backend"
+      description: "UX/UI Design, Mobile Development, & Backend Development"
     },
     {
       title: "Platforms",
@@ -78,7 +78,7 @@ export const fanThreeSixtyData = {
     },
     {
       title: "Platforms",
-      description: "Web, Backend"
+      description: "Web, Backend Development"
     },
     {
       title: "Tech Stack",
@@ -150,6 +150,52 @@ export const apRoboticsData = {
       description:
         "Lots of data, boiled down into simple, predictable, UI components so that users can spend less time guessing, and more time working",
       image: "/ap-robot-section-3.png"
+    }
+  ],
+  next: {
+    name: "Garmin",
+    link: "/projects/garmin"
+  }
+};
+
+export const garminData = {
+  gradientStart: "rgba(0,0,0,1)",
+  gradientStop: "rgba(0,0,0,1)",
+  heroImage: "/garmin-hero.png",
+  heading: "Garmin",
+  description: "Building web experiences and tools, at scale",
+  details: [
+    {
+      title: "Expertise",
+      description: "Frontend Development, Backend Development"
+    },
+    {
+      title: "Platforms",
+      description: "Web"
+    },
+    {
+      title: "Tech Stack",
+      description: "Node, Vue, Elasticsearch, Contentful, Cloud Foundry"
+    }
+  ],
+  sections: [
+    {
+      title: "Scalable Web Content",
+      description:
+        "Built a web content delivery service with Contentful and Elasticsearch, created custom Contentful plugins for content editors, and crafted UI components that allowed marketers to build web pages that worked on all screen sizes, for 40+ languages across all of garmin.com",
+      image: "/garmin-section-1.png"
+    },
+    {
+      title: "Your Watch Your Way",
+      description:
+        "Created a shopping experience that allowed customers to build their perfect watch by choosing a watch face and band combinaiton for multiple families of watches",
+      image: "/garmin-section-2.png"
+    },
+    {
+      title: "Marine Maps",
+      description:
+        "Built a full-stack marine maps discovery and purchase application where users could find maps near their favorite boating locations",
+      image: "/garmin-section-3.png"
     }
   ],
   next: {

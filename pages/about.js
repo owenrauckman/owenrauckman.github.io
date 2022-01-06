@@ -159,7 +159,11 @@ export default function Tryna() {
             data-sal-delay="500"
             data-sal-duration="500"
           >
-            <div className={styles.resumeButton}>
+            <a
+              className={styles.resumeButton}
+              href="/owenRauckmanResume2022.pdf"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className={styles.resumeButtonIcon}
@@ -175,7 +179,7 @@ export default function Tryna() {
                 <line x1="12" y1="8" x2="12" y2="16" />
               </svg>
               <div>Download Resume</div>
-            </div>
+            </a>
           </div>
         </div>
 

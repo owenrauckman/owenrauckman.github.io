@@ -112,8 +112,8 @@ function Header({ showHireButton = false, hireText = "", hireLink = "" }) {
                     </Link>
                   </li>
                   <li className={styles.navItem}>
-                    <Link href="https://www.owenrauckman.com">
-                      <a target="_blank">The Vault</a>
+                    <Link href="/projects/garmin">
+                      <a>Garmin</a>
                     </Link>
                   </li>
                 </ul>
