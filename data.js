@@ -35,11 +35,11 @@ export const trynaData = {
   heroImage: "/tryna-hero.png",
   heading: "Tryna",
   description:
-    "An app built to bring people together: encouraging impromptu hangouts, in real life",
+    "An app built to bring people together by encouraging impromptu hangouts, in real life",
   details: [
     {
       title: "Expertise",
-      description: "UX/UI Design, Mobile Development, & Backend Development"
+      description: "UX/UI Design, Mobile Development, and Backend Development"
     },
     {
       title: "Platforms",
@@ -54,7 +54,7 @@ export const trynaData = {
     {
       title: "You Tryna Hang?",
       description:
-        "The approach is simple: create events, invite your friends, and manage your squads. No group texts, no pressure. You’re either in or out. \n Spend less time your apps, and more time together!",
+        "The approach is simple: create events, invite your friends, and manage your squads. No group texts and no pressure. Spend less time on your phone, and more time together",
       image: "/tryna-section-1.png"
     }
   ],
@@ -70,15 +70,15 @@ export const fanThreeSixtyData = {
   heroImage: "/fanthreesixty-hero.png",
   heading: "FanThreeSixty",
   description:
-    "Building a data platform that makes it crazy simple for teams to engage with their fans",
+    "A data platform that makes it simple for teams to engage with their fans",
   details: [
     {
       title: "Expertise",
-      description: "Frontend Development, Architecture"
+      description: "Frontend Development and Architecture"
     },
     {
       title: "Platforms",
-      description: "Web, Backend Development"
+      description: "Web"
     },
     {
       title: "Tech Stack",
@@ -89,19 +89,19 @@ export const fanThreeSixtyData = {
     {
       title: "Engage with your fans",
       description:
-        "Send mobile communications to fans based on their interests. View metrics on how your content performed, and 1-click retarget from there!",
+        "Send mobile communications to your fans, view metrics on how your content performed, and retarget with one click",
       image: "/fanthreesixty-section-1.png"
     },
     {
       title: "Data, simplified",
       description:
-        "See data from all of your sources, simplified, and neatly displayed throughout the platform in charts--then act on that data!",
+        "Spend less time crunching data and understand your fanbase through simple charts and graphs",
       image: "/fanthreesixty-section-2.png"
     },
     {
       title: "Manage your app",
       description:
-        "Edit the content in your app from anywhere with a mobile-friendly, drag-and-drop app manager.",
+        "Edit your content from anywhere with a mobile-friendly, drag-and-drop app manager",
       image: "/fanthreesixty-section-3.png"
     }
   ],
@@ -121,7 +121,7 @@ export const apRoboticsData = {
   details: [
     {
       title: "Expertise",
-      description: "Product Design, Marketing, CMS, Frontend Development"
+      description: "Product Design, Marketing, CMS, and Frontend Development"
     },
     {
       title: "Platforms",
@@ -136,19 +136,19 @@ export const apRoboticsData = {
     {
       title: "Visual communication",
       description:
-        "Created custom animations and graphics for the marketing website to clearly convey how the product works withour forcing the user to read an excessive amount of text",
+        "Custom animations and graphics on the marketing website help quickly convey how the product works",
       image: "/ap-robot-section-1.png"
     },
     {
       title: "Filter with ease",
       description:
-        "Created a table + filter view that is flexible and easy to read. Users can also save custom views that fit their workflow best.",
+        "Create your own custom table views and filter by over ten types of data to see how invoices are flowing through your system",
       image: "/ap-robot-section-2.png"
     },
     {
-      title: "All in the details",
+      title: "Check the details",
       description:
-        "Lots of data, boiled down into simple, predictable, UI components so that users can spend less time guessing, and more time working",
+        "Get work done faster by viewing all of your data in simple, predictable UI components",
       image: "/ap-robot-section-3.png"
     }
   ],
@@ -163,11 +163,11 @@ export const garminData = {
   gradientStop: "rgba(0,0,0,1)",
   heroImage: "/garmin-hero.png",
   heading: "Garmin",
-  description: "Building web experiences and tools, at scale",
+  description: "Building web experiences, at scale",
   details: [
     {
       title: "Expertise",
-      description: "Frontend Development, Backend Development"
+      description: "Frontend Development and Backend Development"
     },
     {
       title: "Platforms",
@@ -182,13 +182,13 @@ export const garminData = {
     {
       title: "Scalable Web Content",
       description:
-        "Built a web content delivery service with Contentful and Elasticsearch, created custom Contentful plugins for content editors, and crafted UI components that allowed marketers to build web pages that worked on all screen sizes, for 40+ languages across all of garmin.com",
+        "Built a web content delivery service with Contentful and Elasticsearch, created custom Contentful plugins for content editors, and crafted UI components that allowed marketers to build web pages that worked on all screen sizes in 40+ languages",
       image: "/garmin-section-1.png"
     },
     {
       title: "Your Watch Your Way",
       description:
-        "Created a shopping experience that allowed customers to build their perfect watch by choosing a watch face and band combinaiton for multiple families of watches",
+        "Created a shopping experience that allowed customers to build their own watch by choosing a face and band combination",
       image: "/garmin-section-2.png"
     },
     {
