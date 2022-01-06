@@ -16,12 +16,12 @@ const slideUp = {
       opacity: 1,
       top: "0vh",
       scale: 1
-    },
-    exit: {
-      opacity: 0,
-      top: "0vh",
-      scale: 1
     }
+    // exit: {
+    //   opacity: 0,
+    //   top: "0vh",
+    //   scale: 1
+    // }
   },
   transition: {
     duration: 0.4
@@ -40,12 +40,12 @@ const fade = {
       opacity: 1,
       top: "0vh",
       scale: 1
-    },
-    exit: {
-      opacity: 0,
-      top: "0vh",
-      scale: 1
     }
+    // exit: {
+    //   opacity: 0,
+    //   top: "0vh",
+    //   scale: 1
+    // }
   },
   transition: {
     duration: 0.4
