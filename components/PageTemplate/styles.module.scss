@@ -118,12 +118,11 @@
   grid-gap: 40px;
   align-items: center;
   max-width: 600px;
-  margin: 0 auto 120px auto;
+  margin: 0 auto 60px auto;
   @media screen and (min-width: 1024px) {
     max-width: 100%;
     grid-template-columns: 1fr 1fr;
     grid-gap: 60px;
-    margin-bottom: 220px;
   }
 }
 
@@ -159,4 +158,27 @@
     order: 0;
     width: 100%;
   }
+}
+
+.button {
+  color: var(--color-black);
+  background: var(--color-white);
+  padding: 20px 30px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  margin: 0 auto 160px auto;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.buttonIcon {
+  height: 16px;
+  width: 16px;
 }

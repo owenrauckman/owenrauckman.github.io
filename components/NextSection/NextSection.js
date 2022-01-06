@@ -11,13 +11,8 @@ function NextSection({ data }) {
 
   return (
     <div className={styles.nextContainer}>
-      <div
-        className={styles.nextWrapper}
-        data-sal="slide-up"
-        data-sal-delay="300"
-        data-sal-duration="500"
-      >
-        <div>
+      <div className={styles.nextWrapper}>
+        <div data-sal="slide-up" data-sal-delay="300" data-sal-duration="500">
           <div className={styles.nextText}>Next Project</div>
           <Link href={data.next.link}>
             <a className={styles.linkWrapper}>

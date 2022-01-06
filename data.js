@@ -24,8 +24,10 @@ export const homePageData = [
     title: "Garmin",
     link: "/projects/garmin",
     image: "/garmin-home.png",
-    gradientStart: "#60cff6",
-    gradientStop: "#00a0d9"
+    gradientStart: "rgba(0,0,0,1)",
+    gradientStop: "rgba(0,0,0,0.85)"
+    // gradientStart: "#60cff6",
+    // gradientStop: "#00a0d9",
   }
 ];
 
@@ -61,7 +63,9 @@ export const trynaData = {
   next: {
     name: "FanThreeSixty",
     link: "/projects/fanthreesixty"
-  }
+  },
+  buttonText: "Coming Soon",
+  buttonLink: "#"
 };
 
 export const fanThreeSixtyData = {
@@ -108,7 +112,9 @@ export const fanThreeSixtyData = {
   next: {
     name: "AP Robotics",
     link: "/projects/ap-robotics"
-  }
+  },
+  buttonText: "View Project",
+  buttonLink: "https://www.fanthreesixty.com/"
 };
 
 export const apRoboticsData = {
@@ -155,7 +161,9 @@ export const apRoboticsData = {
   next: {
     name: "Garmin",
     link: "/projects/garmin"
-  }
+  },
+  buttonText: "View Project",
+  buttonLink: "https://www.ap-robot.com/"
 };
 
 export const garminData = {
@@ -201,7 +209,9 @@ export const garminData = {
   next: {
     name: "Tryna",
     link: "/projects/tryna"
-  }
+  },
+  buttonText: "View Project",
+  buttonLink: "https://www.garmin.com/"
 };
 
 export const aboutData = {
