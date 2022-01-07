@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
+
 import styles from "../styles/Home.module.scss";
 import { homePageData } from "../data";
 
@@ -28,9 +30,19 @@ export default function Home() {
                   ? { target: "_blank" }
                   : {})}
               >
+                {console.log(project)}
                 <div className={styles.projectContent}>
                   <div className={styles.projectName}>{project.title}</div>
-                  <img className={styles.projectImage} src={project.image} />
+                  <div className={styles.projectImage}>
+                    <Image
+                      alt="project image"
+                      src={project.image}
+                      layout="fill"
+                      objectFit="contain"
+                      placeholder="blur"
+                      className={styles.projectImageNext}
+                    />
+                  </div>
                 </div>
               </a>
             </Link>

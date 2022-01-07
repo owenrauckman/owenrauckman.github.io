@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 import Head from "next/head";
+import Image from "next/image";
+import owenAvi from "../public/owen-avi.png";
+import aboutMap from "../public/about-map.png";
+
 import styles from "../styles/About.module.scss";
 import { aboutData } from "../data";
 import sal from "sal.js";
@@ -38,7 +42,16 @@ export default function Tryna() {
             data-sal-delay="100"
             data-sal-duration="500"
           >
-            <img src="/owen-avi.png" className={styles.meImage} />
+            <div className={styles.meImage}>
+              <Image
+                alt="avatar"
+                src={owenAvi}
+                layout="fill"
+                objectFit="contain"
+                placeholder="blur"
+                className={styles.meImageNext}
+              />
+            </div>
             <div>
               <div className={styles.meName}>Owen Rauckman</div>
               <div className={styles.meTitle}>Lead Software Engineer</div>
@@ -50,7 +63,16 @@ export default function Tryna() {
             data-sal-delay="300"
             data-sal-duration="500"
           >
-            <img src="/about-map.png" className={styles.locationMap} />
+            <div className={styles.locationMap}>
+              <Image
+                alt="map"
+                src={aboutMap}
+                layout="fill"
+                objectFit="responsive"
+                placeholder="blur"
+                className={styles.locationMapNext}
+              />
+            </div>
             <div className={styles.locationTitle}>Kansas City, MO</div>
           </div>
           <div

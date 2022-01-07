@@ -22,9 +22,17 @@
   width: 90%;
   height: auto;
   margin: 4vh auto 0 auto;
+  border-radius: 30px;
+  & span {
+    border-radius: 30px;
+  }
   @media screen and (min-width: 768px) {
     margin: 8vh auto 0 auto;
   }
+}
+
+.projectHeroImageNext {
+  transition: all 0.5s ease;
 }
 
 .heading {
@@ -105,7 +113,7 @@
 .sectionGrid {
   margin: 40px 0;
   @media screen and (min-width: 1024px) {
-    margin: 100px 0;
+    margin: 100px 0 0 0;
   }
   &:last-child {
     margin-bottom: 0;
@@ -118,11 +126,15 @@
   grid-gap: 40px;
   align-items: center;
   max-width: 600px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 120px auto;
   @media screen and (min-width: 1024px) {
     max-width: 100%;
     grid-template-columns: 1fr 1fr;
     grid-gap: 60px;
+    margin-bottom: 220px;
+  }
+  &::last-child {
+    margin-bottom: 0px;
   }
 }
 
@@ -154,10 +166,17 @@
   order: -1;
   margin: 0 auto;
   width: 80%;
+  & span {
+    border-radius: 30px;
+  }
   @media screen and (min-width: 1024px) {
     order: 0;
     width: 100%;
   }
+}
+
+.sectionGridImageNext {
+  transition: all 0.5s ease;
 }
 
 .button {

@@ -81,4 +81,11 @@
   right: 0;
   margin: 0 auto;
   height: 75%;
+  & span {
+    border-radius: 30px;
+  }
+}
+
+.projectImageNext {
+  transition: all 0.5s ease;
 }

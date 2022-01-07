@@ -54,7 +54,7 @@ function Header({ showHireButton = false, hireText = "", hireLink = "" }) {
           </a>
         </Link>
         <div className={styles.right}>
-          <Link href={hireLink}>
+          <Link href={hireLink || "#"}>
             <a
               className={`${styles.hireButton} ${
                 navOpen || !showHireButton ? styles.hideHireButton : ""

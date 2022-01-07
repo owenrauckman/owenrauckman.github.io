@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Image from "next/image";
 import styles from "./styles.module.scss";
 import sal from "sal.js";
 import "sal.js/dist/sal.css";
@@ -20,14 +21,21 @@ function PageTemplate({ data }) {
 
   return (
     <div className={styles.projectContainer} id="js__project-container">
-      <img
+      <div
         className={styles.projectHeroImage}
-        src={data.heroImage}
-        alt="hero image"
         data-sal="zoom-in"
         data-sal-delay="100"
         data-sal-duration="500"
-      />
+      >
+        <Image
+          alt="hero image"
+          src={data.heroImage}
+          layout="responsive"
+          objectFit="contain"
+          placeholder="blur"
+          className={styles.projectHeroImageNext}
+        />
+      </div>
       <h1
         className={styles.heading}
         data-sal="slide-up"
@@ -74,13 +82,20 @@ function PageTemplate({ data }) {
                 {section.description}
               </div>
             </div>
-            <img
+            <div
               className={styles.sectionGridImage}
-              src={section.image}
-              alt="section image"
               data-sal="slide-left"
               data-sal-duration="1000"
-            />
+            >
+              <Image
+                alt="section image"
+                src={section.image}
+                layout="responsive"
+                objectFit="contain"
+                placeholder="blur"
+                className={styles.sectionGridImageNext}
+              />
+            </div>
           </div>
         ))}
       </div>

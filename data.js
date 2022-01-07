@@ -1,29 +1,52 @@
+import trynaHome from "./public/tryna-home.png";
+import fanThreeSixtyHome from "./public/fanthreesixty-home.png";
+import apRobotHome from "./public/ap-robot-home.png";
+import garminHome from "./public/garmin-home.png";
+
+import fanThreeSixtyHero from "./public/fanthreesixty-hero.png";
+import fanThreeSixtySection1 from "./public/fanthreesixty-section-1.png";
+import fanThreeSixtySection2 from "./public/fanthreesixty-section-2.png";
+import fanThreeSixtySection3 from "./public/fanthreesixty-section-3.png";
+
+import trynaHero from "./public/tryna-hero.png";
+import trynaSection1 from "./public/tryna-section-1.png";
+
+import apRobotHero from "./public/ap-robot-hero.png";
+import apRobotSection1 from "./public/ap-robot-section-1.png";
+import apRobotSection2 from "./public/ap-robot-section-2.png";
+import apRobotSection3 from "./public/ap-robot-section-3.png";
+
+import garminHero from "./public/garmin-hero.png";
+import garminSection1 from "./public/garmin-section-1.png";
+import garminSection2 from "./public/garmin-section-2.png";
+import garminSection3 from "./public/garmin-section-3.png";
+
 export const homePageData = [
   {
     title: "Tryna",
     link: "/projects/tryna",
-    image: "/tryna-home.png",
+    image: trynaHome,
     gradientStart: "rgba(0,0,0,1)",
     gradientStop: "rgba(0,0,0,0.85)"
   },
   {
     title: "FanThreeSixty",
     link: "/projects/fanthreesixty",
-    image: "fanthreesixty-home.png",
+    image: fanThreeSixtyHome,
     gradientStart: "rgba(89,104,253,1)",
     gradientStop: "rgba(106,52,241,1)"
   },
   {
     title: "AP Robotics",
     link: "/projects/ap-robotics",
-    image: "/ap-robot-home.png",
+    image: apRobotHome,
     gradientStart: "rgba(202,70,88,1)",
     gradientStop: "rgba(190,55,144,1)"
   },
   {
     title: "Garmin",
     link: "/projects/garmin",
-    image: "/garmin-home.png",
+    image: garminHome,
     gradientStart: "rgba(0,0,0,1)",
     gradientStop: "rgba(0,0,0,0.85)"
     // gradientStart: "#60cff6",
@@ -34,7 +57,7 @@ export const homePageData = [
 export const trynaData = {
   gradientStart: "rgba(0,0,0,1)",
   gradientStop: "rgba(0,0,0,1)",
-  heroImage: "/tryna-hero.png",
+  heroImage: trynaHero,
   heading: "Tryna",
   description:
     "An app built to bring people together by encouraging impromptu hangouts, in real life",
@@ -57,7 +80,7 @@ export const trynaData = {
       title: "You Tryna Hang?",
       description:
         "The approach is simple: create events, invite your friends, and manage your squads. No group texts and no pressure. Spend less time on your phone, and more time together",
-      image: "/tryna-section-1.png"
+      image: trynaSection1
     }
   ],
   next: {
@@ -71,7 +94,7 @@ export const trynaData = {
 export const fanThreeSixtyData = {
   gradientStart: "rgba(89,104,253,1)",
   gradientStop: "rgba(106,52,241,1)",
-  heroImage: "/fanthreesixty-hero.png",
+  heroImage: fanThreeSixtyHero,
   heading: "FanThreeSixty",
   description:
     "A data platform that makes it simple for teams to engage with their fans",
@@ -94,19 +117,19 @@ export const fanThreeSixtyData = {
       title: "Engage with your fans",
       description:
         "Send mobile communications to your fans, view metrics on how your content performed, and retarget with one click",
-      image: "/fanthreesixty-section-1.png"
+      image: fanThreeSixtySection1
     },
     {
       title: "Data, simplified",
       description:
         "Spend less time crunching data and understand your fanbase through simple charts and graphs",
-      image: "/fanthreesixty-section-2.png"
+      image: fanThreeSixtySection2
     },
     {
       title: "Manage your app",
       description:
         "Edit your content from anywhere with a mobile-friendly, drag-and-drop app manager",
-      image: "/fanthreesixty-section-3.png"
+      image: fanThreeSixtySection3
     }
   ],
   next: {
@@ -120,7 +143,7 @@ export const fanThreeSixtyData = {
 export const apRoboticsData = {
   gradientStart: "rgba(202,70,88,1)",
   gradientStop: "rgba(115,103,228,1)",
-  heroImage: "/ap-robot-hero.png",
+  heroImage: apRobotHero,
   heading: "AP Robotics",
   description:
     "A marketing website + a UI overhaul to help launch a new product offering",
@@ -143,19 +166,19 @@ export const apRoboticsData = {
       title: "Visual communication",
       description:
         "Custom animations and graphics on the marketing website help quickly convey how the product works",
-      image: "/ap-robot-section-1.png"
+      image: apRobotSection1
     },
     {
       title: "Filter with ease",
       description:
         "Create your own custom table views and filter by over ten types of data to see how invoices are flowing through your system",
-      image: "/ap-robot-section-2.png"
+      image: apRobotSection2
     },
     {
       title: "Check the details",
       description:
         "Get work done faster by viewing all of your data in simple, predictable UI components",
-      image: "/ap-robot-section-3.png"
+      image: apRobotSection3
     }
   ],
   next: {
@@ -169,7 +192,7 @@ export const apRoboticsData = {
 export const garminData = {
   gradientStart: "rgba(0,0,0,1)",
   gradientStop: "rgba(0,0,0,1)",
-  heroImage: "/garmin-hero.png",
+  heroImage: garminHero,
   heading: "Garmin",
   description: "Building web experiences, at scale",
   details: [
@@ -191,19 +214,19 @@ export const garminData = {
       title: "Scalable Web Content",
       description:
         "Built a web content delivery service with Contentful and Elasticsearch, created custom Contentful plugins for content editors, and crafted UI components that allowed marketers to build web pages that worked on all screen sizes in 40+ languages",
-      image: "/garmin-section-1.png"
+      image: garminSection1
     },
     {
       title: "Your Watch Your Way",
       description:
         "Created a shopping experience that allowed customers to build their own watch by choosing a face and band combination",
-      image: "/garmin-section-2.png"
+      image: garminSection2
     },
     {
       title: "Marine Maps",
       description:
         "Built a full-stack marine maps discovery and purchase application where users could find maps near their favorite boating locations",
-      image: "/garmin-section-3.png"
+      image: garminSection3
     }
   ],
   next: {
