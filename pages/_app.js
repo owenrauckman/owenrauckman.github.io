@@ -2,6 +2,8 @@ import styles from "../styles/globals.css";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { AnimatePresence, domAnimation, LazyMotion, m } from "framer-motion";
+import Script from "next/script";
+
 import { useEffect } from "react";
 
 const slideUp = {
@@ -55,6 +57,19 @@ const fade = {
 function MyApp({ Component, pageProps, router }) {
   const animation = router.route === "/" ? slideUp : fade;
 
+  useEffect(() => {
+    const handleRouteChange = url => {
+      window.gtag("config", "UA-51475352-1", {
+        page_path: url
+      });
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <div className="app-wrap">
       <Header
@@ -81,6 +96,19 @@ function MyApp({ Component, pageProps, router }) {
           </m.div>
         </AnimatePresence>
       </LazyMotion>
+      <Script
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=UA-51475352-1"
+      />
+      <Script id="ga-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-51475352-1');
+        `}
+      </Script>
     </div>
   );
 }
