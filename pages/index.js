@@ -30,7 +30,6 @@ export default function Home() {
                   ? { target: "_blank" }
                   : {})}
               >
-                {console.log(project)}
                 <div className={styles.projectContent}>
                   <div className={styles.projectName}>{project.title}</div>
                   <div className={styles.projectImage}>
