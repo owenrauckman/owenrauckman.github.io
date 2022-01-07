@@ -83,6 +83,8 @@
   height: 75%;
   & span {
     border-radius: 30px;
+    width: 75% !important; /* So preview load doesn't look weird */
+    margin: 0 auto !important;
   }
 }
 
