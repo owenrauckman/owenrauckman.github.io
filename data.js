@@ -1,6 +1,7 @@
 import trynaHome from "./public/tryna-home.png";
 import fanThreeSixtyHome from "./public/fanthreesixty-home.png";
 import apRobotHome from "./public/ap-robot-home.png";
+import agFutureHome from "./public/ag-future-home.png";
 import garminHome from "./public/garmin-home.png";
 
 import fanThreeSixtyHero from "./public/fanthreesixty-hero.png";
@@ -20,6 +21,11 @@ import garminHero from "./public/garmin-hero.png";
 import garminSection1 from "./public/garmin-section-1.png";
 import garminSection2 from "./public/garmin-section-2.png";
 import garminSection3 from "./public/garmin-section-3.png";
+
+import agFutureHero from "./public/ag-future-hero.png";
+import agFutureSection1 from "./public/ag-future-section-1.png";
+import agFutureSection2 from "./public/ag-future-section-2.png";
+import agFutureSection3 from "./public/ag-future-section-3.png";
 
 export const homePageData = [
   {
@@ -42,6 +48,13 @@ export const homePageData = [
     image: apRobotHome,
     gradientStart: "rgba(202,70,88,1)",
     gradientStop: "rgba(190,55,144,1)"
+  },
+  {
+    title: "Ag Future",
+    link: "/projects/ag-future",
+    image: agFutureHome,
+    gradientStart: "rgba(0,150,57,1)",
+    gradientStop: "rgba(5,120,48,1)"
   },
   {
     title: "Garmin",
@@ -182,8 +195,8 @@ export const apRoboticsData = {
     }
   ],
   next: {
-    name: "Garmin",
-    link: "/projects/garmin"
+    name: "Ag Future",
+    link: "/projects/ag-future"
   },
   buttonText: "View Project",
   buttonLink: "https://www.ap-robot.com/"
@@ -235,6 +248,55 @@ export const garminData = {
   },
   buttonText: "View Project",
   buttonLink: "https://www.garmin.com/"
+};
+
+export const agFutureData = {
+  gradientStart: "rgba(0,150,57,1)",
+  gradientStop: "rgba(0,85,32,1)",
+  heroImage: agFutureHero,
+  heading: "Agriculture Future of America",
+  description:
+    "A web experience with an engaging UX that simplified a decade of content strategy",
+  details: [
+    {
+      title: "Expertise",
+      description: "Design, Marketing, CMS, Frontend Development"
+    },
+    {
+      title: "Platforms",
+      description: "Web"
+    },
+    {
+      title: "Tech Stack",
+      description: "Javascript, Next.js, Storyblok"
+    }
+  ],
+  sections: [
+    {
+      title: "The art of storytelling",
+      description:
+        "Collaborated with a copywriter to effectively communicate AFA’s mission + crafted a UI that resonated with all of their audiences: from investors to students",
+      image: agFutureSection1
+    },
+    {
+      title: "Bringing clarity",
+      description:
+        "Took content from dozens of scattered conference pages and combined them into one great looking, easy to understand experience that was powered by an awesome CMS behind the scenes",
+      image: agFutureSection2
+    },
+    {
+      title: "Find your way",
+      description:
+        "Took relevant information from hundreds of legacy pages and created concise, well-structured content + a friendly new nav to explore it all with",
+      image: agFutureSection3
+    }
+  ],
+  next: {
+    name: "Garmin",
+    link: "/projects/garmin"
+  },
+  buttonText: "View Project",
+  buttonLink: "https://www.agfuture.org/"
 };
 
 export const aboutData = {
