@@ -54,7 +54,7 @@ export default function Tryna() {
             </div>
             <div>
               <div className={styles.meName}>Owen Rauckman</div>
-              <div className={styles.meTitle}>Lead Software Engineer</div>
+              <div className={styles.meTitle}>Software Architect</div>
             </div>
           </div>
           <div
