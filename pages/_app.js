@@ -12,13 +12,13 @@ const slideUp = {
     initial: {
       opacity: 0,
       top: "10vh",
-      scale: 0.9
+      scale: 0.9,
     },
     animate: {
       opacity: 1,
       top: "0vh",
-      scale: 1
-    }
+      scale: 1,
+    },
     // exit: {
     //   opacity: 0,
     //   top: "0vh",
@@ -26,8 +26,8 @@ const slideUp = {
     // }
   },
   transition: {
-    duration: 0.4
-  }
+    duration: 0.4,
+  },
 };
 
 const fade = {
@@ -36,13 +36,13 @@ const fade = {
     initial: {
       opacity: 0,
       top: "10vh",
-      scale: 1
+      scale: 1,
     },
     animate: {
       opacity: 1,
       top: "0vh",
-      scale: 1
-    }
+      scale: 1,
+    },
     // exit: {
     //   opacity: 0,
     //   top: "0vh",
@@ -50,17 +50,17 @@ const fade = {
     // }
   },
   transition: {
-    duration: 0.4
-  }
+    duration: 0.4,
+  },
 };
 
 function MyApp({ Component, pageProps, router }) {
   const animation = router.route === "/" ? slideUp : fade;
 
   useEffect(() => {
-    const handleRouteChange = url => {
+    const handleRouteChange = (url) => {
       window.gtag("config", "UA-51475352-1", {
-        page_path: url
+        page_path: url,
       });
     };
     router.events.on("routeChangeComplete", handleRouteChange);
@@ -98,7 +98,8 @@ function MyApp({ Component, pageProps, router }) {
       </LazyMotion>
       <Script
         strategy="lazyOnload"
-        src="https://www.googletagmanager.com/gtag/js?id=UA-51475352-1"
+        async={true}
+        src="https://www.googletagmanager.com/gtag/js?id=G-1SNRHGK9WX"
       />
       <Script id="ga-analytics">
         {`
@@ -106,7 +107,7 @@ function MyApp({ Component, pageProps, router }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'UA-51475352-1');
+          gtag('config', 'G-1SNRHGK9WX');
         `}
       </Script>
     </div>
